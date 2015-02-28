@@ -120,6 +120,9 @@
 \usepackage[bookmarks, colorlinks, breaklinks, pdftitle={John D. Chodera - vita},pdfauthor={John D. Chodera}]{hyperref}  
 \hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue} 
 
+% Change the typewriter font to something nicer.
+\usepackage[ttdefault]{sourcecodepro}
+
 % DOCUMENT
 \begin{document}
 \reversemarginpar
@@ -127,14 +130,15 @@
 {\fontseries{eb}\selectfont \LARGE John D. Chodera}\\[1cm]
 
 % FILL IN AUTHOR INFORMATION HERE
-\begin{minipage}[t]{1.2in}
-\includegraphics[width=0.7in,valign=c]{images/john_chodera_sm.pdf}
+\begin{minipage}[t]{2.5in}
+%\includegraphics[width=0.7in,valign=c]{images/john_chodera_sm.pdf}
+\includegraphics[width=2.5in,valign=c]{images/john_chodera_wide.pdf}
 \end{minipage}
 \quad
-\begin{minipage}[t]{6in}
+\begin{minipage}[t]{3in}
 \begin{tabular}{rl}
-{\bf email} & \href{mailto:choderaj@mskcc.org}{\nolinkurl{choderaj@mskcc.org}}\\
-{\bf url} & \href{http://www.choderalab.org}{\nolinkurl{http://www.choderalab.org}}\\[0.05in]
+{\bf email} & \href{mailto:choderaj@mskcc.org}{\href{mailto:john.chodera@choderalab.org}{john.chodera@choderalab.org}}\\
+{\bf url} & \href{http://www.choderalab.org}{\href{http://www.choderalab.org}{http://www.choderalab.org}}\\[0.05in]
 {\bf tel} & 646.888.3400\\[0.05in]
 {\bf fax} & 510.280.3760 \\[0.05in]
 {\bf mobile} & 415.867.7384\\[0.05in]
@@ -539,8 +543,9 @@ Structure
 
 % FILL IN THE FULL URL TO YOUR CV
 \begin{center}
-{\footnotesize Latest version available online at \href{http://www.choderalab.org}{http://choderalab.org} --- this version current as of \today.}\\
-{\footnotesize The template for this CV is available at \url{https://github.com/jchodera/latex-cv}}
+{\footnotesize 
+Latest version available online at \href{http://www.choderalab.org}{http://choderalab.org} --- this version current as of \today.\\
+The template for this CV is available at \href{https://github.com/jchodera/latex-cv}{https://github.com/jchodera/latex-cv}}
 \end{center}
 
 \end{document}
