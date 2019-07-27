@@ -178,6 +178,7 @@
 \end{minipage}
 \quad
 \begin{minipage}[t]{3in}
+\small
 \begin{tabular}{rl}
 {\bf url} & \href{http://www.choderalab.org}{http://www.choderalab.org}\\[0.05in]
 {\bf email} & \href{mailto:choderaj@mskcc.org}{\href{mailto:john.chodera@choderalab.org}{john.chodera@choderalab.org}}\\[0.05in]
@@ -207,6 +208,8 @@ New York, NY 10065}
 \vspace{-0.15in}
 \section*{Education and positions}
 \vspace{-0.15in}
+
+\small
 
 \noindent\years{2019--2021}{\bf BIH Einstein Visiting Professor, Charit\'{e}, Berlin}\\
 \noindent\years{2018--}{\bf Associate Member, Memorial Sloan-Kettering Cancer Center}\\
@@ -263,8 +266,9 @@ Undergraduate research with \href{http://www.its.caltech.edu/~phplab/phplab.html
 %In addition, we employ the Folding@home worldwide distributed computing platform---where hundreds of thousands of donors around the world contribute their computing power~\cite{shirts-pande:science:2000:folding-at-home,folding-at-home-stats}---to study the conformational dynamics of cancer targets (such as kinases, small GTPases like Ras, and protein methyltransferases) in order to understand function, disease, and opportunities for allosteric modulation with small molecules.
 %Major collaborations with both academic laboratories and pharmaceutical companies use computation and biophysical experiment to explore various aspects of biomolecular dynamics, drug pharmacokinetics, design of biological therapeutics, new biophysical measurement and screening technologies, and emerging targets.
 
-My research focuses on {\bf bringing rigorous atomistic modeling into the high-throughput biology and genomics era} and  {\bf reimagining the way we develop small molecules for chemical biology and drug discovery}.
+My research focuses on {\bf bringing physical modeling into the high-throughput biology and genomics era} and {\bf reimagining the way we develop small molecules for chemical biology and drug discovery}.
 By combining novel algorithmic advances to achieve orders-of-magnitude efficiency gains with powerful but inexpensive GPU hardware, machine learning, and distributed computing technologies, my lab is developing next-generation approaches and open source software for predicting small molecule binding affinities, designing small molecules with desired properties, predicting the drug sensitivity or resistance of clinical mutations, and understanding the detailed structural mechanisms underlying oncogenic mutations.
+We co-develop the \href{http://openmm.org}{OpenMM} GPU-powered molecular simulation framework, which powers numerous biomolecular modeling and simulation applications. 
 As a core member of the \href{https://foldingathome.stanford.edu/about/the-foldinghome-consortium/}{Folding@home Consortium}, my lab harnesses the computing power of hundreds of thousands of volunteers around the world to study functional implications of mutations and new opportunities for therapeutic design against cancer targets.
 %We are also a core member of the \href{http://openforcefield.org}{Open Force Field Consortium}, an industry-funded open effort to develop better force fields for drug discovery and biomolecular modeling.
 Using automated biophysical measurements, we collect new experimental data targeted to advance the quantitative accuracy of our methodologies, and gather new insight into drug susceptibility and resistance in kinases and other cancer targets.
@@ -275,6 +279,18 @@ I am passionate about open science, disseminating scientific best practices, and
 \setstretch{1.00} 
 
 \eject
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Software}
+
+\setstretch{1.05} 
+
+Major codes developed by our lab can be found at \url{http://choderalab.org/code}
+
+All software is licensed under permissive \href{http://opensource.org}{OSI}-approved open source licenses and available on \href{http://github.com/choderalab}{GitHub}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % PUBLICATIONS
@@ -292,7 +308,7 @@ bioR$\chi$iv preprints: \href{https://bit.ly/2LHGwxJ}{https://bit.ly/2LHGwxJ} \\
 ar$\chi$iv preprints: \href{https://bit.ly/2Rp2Y3T}{https://bit.ly/2Rp2Y3T} \\
 Open source software: \href{http://choderalab.org/code}{http://choderalab.org/code}
 Major datasets: \href{http://choderalab.org/data}{http://choderalab.org/data} \\
-{\small \it h-index: 40 / i10-index: 58 / citations: 8667 (6 Apr 2019)} \\
+{\small \it h-index: 40 / i10-index: 59 / citations: 9125 (27 Jul 2019)} \\
 {\scriptsize $^*$ denotes co-first-authors \\
 $\dag$ denotes co-second-authors \\
 $\ddag$ denotes co-corresponding authors}
@@ -312,21 +328,36 @@ $\ddag$ denotes co-corresponding authors}
 
 \section*{Submitted and Under Review}
 
-\newarticle{erk-reconstruction}{Sang D, Pinglay S, Wiewiora RP, Selvan ME, Lou HJ, \jdc, Turk B, G\"{u}m\"{u}\c{s} Z, and Holt LJ.}{Ancestral reconstruction reveals mechanisms of ERK regulatory evolution}{Submitted}{}{}{To understand how kinase regulation by phosphorylation emerged, we reconstruct the common ancestor of CDKs and MAPKs, using biochemical experiments and massively parallel molecular simulations to study how a few mutations were sufficient to switch ERK-family kinases from high- to low-autophosphorylation.}
+\newarticle{slochower-host-guest}{Slochower DR, Hendrikson NM, Wang LP, \jdc, Mobley DL, and Gilson MK}{Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 from the Open Force Field Initiative}{Submitted}{manubot}{https://slochower.github.io/smirnoff-host-guest-manuscript/}{We assess the accuracy of the SMIRNOFF99Frosst 1.0.5 force field in reproducing host-guest binding thermodynamics in comparison with the GAFF force field, demonstrating how the SMIRNOFF format for compactly specifying force fields provide comparable accuracy with 20x fewer parameters.}
 
-\newarticle{setd8-msm}{Rafal P. Wiewiora$^\dag$, Shi Chen$^\dag$, Fanwang Meng, Nicolas Babault, Anqi Ma, Wenyu Yu, Kun Qian, Hao Hu, Hua Zou, Junyi Wang, Shijie Fan, Gil Blum, Fabio Pittella-Silva, Kyle A. Beauchamp, Wolfram Tempel, Hualing Jiang, Kaixian Chen, Robert Skene, Y. George Zheng, Peter J. Brown, Jian Jin, \jdc$^\ddag$, and Minkui Luo$^\ddag$}{The dynamic conformational landscapes of the protein methyltransferase SETD8}{Submitted}{bioR$\chi$iv}{https://doi.org/10.1101/438994}{In this work, we show how targeted X-ray crystallography using covalent inhibitors and depletion of native ligands to reveal structures of low-population hidden conformations can be combined with massively distributed molecular simulation to resolve the functional dynamic landscape of the protein methyltransferase SETD8 in unprecedented atomistic detail. Using an aggregate of six milliseconds of fully atomistic simulation from Folding\@home, we use Markov state models to illuminate the conformational dynamics of this important epigenetic protein.}
-
-\newarticle{id1}{Paulina M. Wojnarowicz, Raquel Lima e Silva, Masayuki Ohanka, Sang Bae Lee, Yvette Chin, Anita Kulukian, Sung-Hee Chang, Bina Desai, Marta Garcia Escolano, Riddhi Shah, Marta Garcia-Cao, Sijia Xu, Rashmi Thakar, Yehuda Goldgur, Meredith A. Miller, Ouathek Ouerfelli, Guangli Yang, Tsutomu Arakawa, Steven K. Albanese, William A. Garland, Glenn Stoller, Jaideep Chaudhary, Rajesh Soni, John Philip, Ronald C. Hendrickson, Antonio Iavarone, Andrew J. Dannenberg, \jdc, Nikola Pavletich, Anna Lasorella, Peter A. Campochiaro, and Robert Benezra}{A novel small-molecule pan-Id antagonist inhibits pathologic ocular neovascularization}{Submitted}{}{}{We report the discovery and characterization of a small molecule, AGX51, with the surprising ability to inhibit the interaction of Id1 with E47, which leads to ubiquitin-mediated degradation of Ids.}
-
-\newarticle{musashi}{Minuesa G, Albanese SK, Chow A, Schurer A, Park SM, Rotsides CZ, Taggart J, Rizzi A, Naden LN, Chou T, Gourkanti S, Cappel D, Passarelli MC, Fairchild L, Adura C, Glickman FJ, Schulman J, Famulare C, Patel M, Eibl JK, Ross GM, Tan DS, Leslie CS, Beeming T, Golgur Y, \jdc, and Kharas MG. }{Small-molecule targeting of MUSASHI RNA-binding activity in acute myeloid leukemia}{Submitted}{bioR$\chi$iv}{https://doi.org/10.1101/321174}{We use absolute alchemical free energy calculations to identify the likely interaction site for a small hydrophobic ligand that shows activity against MUSASHI in AML.}
+%\newarticle{id1}{Paulina M. Wojnarowicz, Raquel Lima e Silva, Masayuki Ohanka, Sang Bae Lee, Yvette Chin, Anita Kulukian, Sung-Hee Chang, Bina Desai, Marta Garcia Escolano, Riddhi Shah, Marta Garcia-Cao, Sijia Xu, Rashmi Thakar, Yehuda Goldgur, Meredith A. Miller, Ouathek Ouerfelli, Guangli Yang, Tsutomu Arakawa, Steven K. Albanese, William A. Garland, Glenn Stoller, Jaideep Chaudhary, Rajesh Soni, John Philip, Ronald C. Hendrickson, Antonio Iavarone, Andrew J. Dannenberg, \jdc, Nikola Pavletich, Anna Lasorella, Peter A. Campochiaro, and Robert Benezra}{A novel small-molecule pan-Id antagonist inhibits pathologic ocular neovascularization}{Submitted}{}{}{We report the discovery and characterization of a small molecule, AGX51, with the surprising ability to inhibit the interaction of Id1 with E47, which leads to ubiquitin-mediated degradation of Ids.}
 
 %\newarticle{id1}{Wojnarowicz P, Desai B, Chin Y, Lima e Silva R, Ohnaka M, Lee SB, Cao MG, Ouerfelli O, Xu S, Goldgur Y, Miller M, Chaudhary J, Garland W, Stoller G, Albanese SA, Soni R, Philip J, Healey J, Vinagolu R, Norton L, Rosen N, Hendrickson R, Iavarone A, Dannenberg A, \jdc, Pavletich N, Lasorella A, Campochiaro P, Benezra R}{A small-molecule pan Id antagonist, AGX51, shows strong anti-tumor and anti-neovascular activity}{In revision}{bioR$\chi$iv}{https://doi.org/10.1101/205260}{We identify the binding mode of a new small-molecule pan-Id antagonist prior to its confirmation by mass spectrometry crosslinking data.}
 
 %\eject
+\vspace{-0.2in}
+
+%%%%%%%%%%%%
+
+\section*{Preprints ahead of submission}
+
+\newarticle{itc-worksheet}{Boyce SE, Tellinghuisen JT, and \jdc}{Avoiding accuracy-limiting pitfalls in the study of protein-ligand interactions with isothermal titration calorimetry}{\emph{Preprint ahead of submission}}{bioR$\chi$iv}{http://dx.doi.org/10.1101/018036}{We demonstrate how to avoid accuracy-limiting problems in standard isothermal calorimetry experiments as well as capture the primary sources of uncertainty in thermodynamic parameters.}
+
+\newarticle{bhmm.pdf}{\jdc, No\'{e} F, Hinrichs NS, Keller B, Elms PJ, Kaiser CM, Ewall-Wice A, Marqusee S, and Bustamante C}{Bayesian hidden Markov model analysis of single-molecule biophysical experiments}{\emph{Preprint ahead of submission}}{ar$\chi$iv}{http://arxiv.org/find/all/1/all:+chodera/0/1/0/all/0/1}{We present a Bayesian hidden Markov model analysis scheme that allows biomolecular conformational dynamics---and the corresponding uncertainty due to limited data---to be inferred from single-molecule trajectories. This approach was developed for a single-molecule study examining folding dynamics of nascent proteins exiting the ribosome [Science 334:1723, 2011 $\cdot$ \href{http://dx.doi.org/10.1126/science.1209740}{DOI}].}
+
+\newarticle{robust-rate-estimates.pdf}{\jdc, Elms PJ, Swope WC, Prinz J-H, Marqusee S, Bustamante C, No\'{e} F, and Pande VS}{A robust approach to estimating rates from time-correlation functions}{\emph{Preprint ahead of submission}}{ar$\chi$iv}{http://arxiv.org/abs/1108.2304}{We present a simple, robust approach to estimating two-state rate constants from experimental or simulation data.}
+
+\vspace{-0.2in}
 
 %%%%%%%%%%%%
 
 \section*{Published and In Press}
+
+\newarticle{erk-reconstruction}{Sang D, Pinglay S, Wiewiora RP, Selvan ME, Lou HJ, \jdc, Turk B, G\"{u}m\"{u}\c{s} Z, and Holt LJ.}{Ancestral reconstruction reveals mechanisms of ERK regulatory evolution}{\emph{eLife}, in press}{bioR$\chi$iv}{https://www.biorxiv.org/content/10.1101/331637v1}{To understand how kinase regulation by phosphorylation emerged, we reconstruct the common ancestor of CDKs and MAPKs, using biochemical experiments and massively parallel molecular simulations to study how a few mutations were sufficient to switch ERK-family kinases from high- to low-autophosphorylation.}
+
+\newarticle{setd8-msm}{Rafal P. Wiewiora$^\dag$, Shi Chen$^\dag$, Fanwang Meng, Nicolas Babault, Anqi Ma, Wenyu Yu, Kun Qian, Hao Hu, Hua Zou, Junyi Wang, Shijie Fan, Gil Blum, Fabio Pittella-Silva, Kyle A. Beauchamp, Wolfram Tempel, Hualing Jiang, Kaixian Chen, Robert Skene, Y. George Zheng, Peter J. Brown, Jian Jin, \jdc$^\ddag$, and Minkui Luo$^\ddag$}{The dynamic conformational landscapes of the protein methyltransferase SETD8}{\emph{eLife} 8:e45403, 2019}{DOI}{http://doi.org/10.7554/eLife.45403}{In this work, we show how targeted X-ray crystallography using covalent inhibitors and depletion of native ligands to reveal structures of low-population hidden conformations can be combined with massively distributed molecular simulation to resolve the functional dynamic landscape of the protein methyltransferase SETD8 in unprecedented atomistic detail. Using an aggregate of six milliseconds of fully atomistic simulation from Folding\@home, we use Markov state models to illuminate the conformational dynamics of this important epigenetic protein.}
+
+\newarticle{musashi}{Minuesa G, Albanese SK, Chow A, Schurer A, Park SM, Rotsides CZ, Taggart J, Rizzi A, Naden LN, Chou T, Gourkanti S, Cappel D, Passarelli MC, Fairchild L, Adura C, Glickman FJ, Schulman J, Famulare C, Patel M, Eibl JK, Ross GM, Tan DS, Leslie CS, Beeming T, Golgur Y, \jdc, and Kharas MG. }{Small-molecule targeting of MUSASHI RNA-binding activity in acute myeloid leukemia}{\emph{Nature Communications} 10:2691, 2019}{DOI}{https://doi.org/10.1038/s41467-019-10523-3}{We use absolute alchemical free energy calculations to identify the likely interaction site for a small hydrophobic ligand that shows activity against MUSASHI in AML.}
 
 \newarticle{ddr1-dfg-pmf}{Hanson SM$^*$, Georghiou G$^*$, Miller WT, Rest JS, \jdc$\ddag$, and Seeliger MA$\ddag$}{What makes a kinase promiscuous for inhibitors?}{\emph{Cell Chemical Biology} 26:390, 2019}{DOI}{https://doi.org/10.1016/j.chembiol.2018.11.005}{Using a combination of chemogenomics, structural biology, and molecular simulation approaches, we identify a set of human kinases that are especially promiscuous binders of small molecule kinase inhibitors, and show that a prototypical member of this class, DDR1, achieves this promiscuity by virtue of its more stable Asp-DFG-out conformation.}
 
@@ -475,16 +506,6 @@ $\ddag$ denotes co-corresponding authors}
 \newarticle{folding-funnel.pdf}{Dill KA, Ozkan SB, Weikl TR, \jdc, and Voelz VA}{The protein folding problem: When will it be solved?}{\emph{Current Opinion in Structural Biology} 17(3):342, 2007}{DOI}{http://dx.doi.org/10.1016/j.sbi.2007.06.001}{A review of the current state of the protein folding problem.}
 
 \eject
-
-%%%%%%%%%%%%
-
-\section*{Preprints ahead of submission}
-
-\newarticle{itc-worksheet}{Boyce SE, Tellinghuisen JT, and \jdc}{Avoiding accuracy-limiting pitfalls in the study of protein-ligand interactions with isothermal titration calorimetry}{\emph{Preprint ahead of submission}}{bioR$\chi$iv}{http://dx.doi.org/10.1101/018036}{We demonstrate how to avoid accuracy-limiting problems in standard isothermal calorimetry experiments as well as capture the primary sources of uncertainty in thermodynamic parameters.}
-
-\newarticle{bhmm.pdf}{\jdc, No\'{e} F, Hinrichs NS, Keller B, Elms PJ, Kaiser CM, Ewall-Wice A, Marqusee S, and Bustamante C}{Bayesian hidden Markov model analysis of single-molecule biophysical experiments}{\emph{Preprint ahead of submission}}{ar$\chi$iv}{http://arxiv.org/find/all/1/all:+chodera/0/1/0/all/0/1}{We present a Bayesian hidden Markov model analysis scheme that allows biomolecular conformational dynamics---and the corresponding uncertainty due to limited data---to be inferred from single-molecule trajectories. This approach was developed for a single-molecule study examining folding dynamics of nascent proteins exiting the ribosome [Science 334:1723, 2011 $\cdot$ \href{http://dx.doi.org/10.1126/science.1209740}{DOI}].}
-
-\newarticle{robust-rate-estimates.pdf}{\jdc, Elms PJ, Swope WC, Prinz J-H, Marqusee S, Bustamante C, No\'{e} F, and Pande VS}{A robust approach to estimating rates from time-correlation functions}{\emph{Preprint ahead of submission}}{ar$\chi$iv}{http://arxiv.org/abs/1108.2304}{We present a simple, robust approach to estimating two-state rate constants from experimental or simulation data.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % OTHER ACTIVITIES
