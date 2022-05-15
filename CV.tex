@@ -315,7 +315,7 @@ All software is licensed under permissive \href{http://opensource.org}{OSI}-appr
 
 \setstretch{1.05} 
 
-\begin{minipage}[t]{3.2in}
+\begin{minipage}[t]{3.3in}
 All publications: \href{http://choderalab.org/publications}{http://choderalab.org/publications} \\
 Google Scholar statistics: \href{http://goo.gl/qO0JW}{http://goo.gl/qO0JW} \hspace{0.2in} \\
 MyNCBI Bibliography: \href{http://goo.gl/e3kjgK}{http://goo.gl/e3kjgK} \\
@@ -324,7 +324,7 @@ ar$\chi$iv preprints: \href{https://bit.ly/2Rp2Y3T}{https://bit.ly/2Rp2Y3T} \\
 chemRxiv preprints: \href{https://chemrxiv.org/search?q=chodera}{https://chemrxiv.org/search?q=chodera} \\
 Open source software: \href{http://choderalab.org/code}{http://choderalab.org/code}\\
 Major datasets: \href{http://choderalab.org/data}{http://choderalab.org/data} \\
-{\small \it h-index: 52 / i10-index: 98 / citations: 15007 (8 Jan 2022)} \\
+{\small \it h-index: 54 / i10-index: 102 / citations: 16143 (14 May 2022)} \\
 {\scriptsize $^*$ denotes co-first-authors \\
 $\dag$ denotes co-second-authors \\
 $\ddag$ denotes co-corresponding authors}
@@ -355,18 +355,14 @@ $\ddag$ denotes co-corresponding authors}
 \newarticle{qml-explicit-free-energy}{Wieder M, Fass J, and \jdc}{Teaching free energy calculations to learn from experimental data
 }{\emph{Preprint}}{bioRxiv}{https://doi.org/10.1101/2021.08.24.457513}{We describe a new software framework for automated evaluation of physical properties for the benchmarking and optimization of small molecule force fields according to best practices.}
 
+% new
+\newarticle{nnp-mm}{Galvelis R, Varela-Rial A, Doerr S, Fino R, Eastman P, Markland TE,  \jdc, and de~Fabritiis G}{NNP/MM: Fast molecular dynamics simulations with machine learning potentials and molecular mechanics}{\emph{Preprint}}{ar$\chi$iv}{https://arxiv.org/abs/2201.08110}{We demonstrate that a new generation of quantum machine learning (QML) potentials based on neural networks---which can achieve quantum chemical accuracy at a fraction of the cost---can be implemented efficiently in the OpenMM molecular dynamics simulation engine as part of hybrid machine learning / molecular mechanics (ML/MM) potentials that promise to deliver superior accuracy for modeling protein-ligand interactions.}
+
 \newarticle{espaloma.jpg}{Wang Y, Fass J, and \jdc}{End-to-end differentiable molecular mechanics force field construction}{\emph{Preprint}}{aR$\chi$iv}{https://arxiv.org/abs/2010.01196}{Molecular mechanics force fields have been a workhorse for computational chemistry and drug discovery. Here, we propose a new approach to force field parameterization in which graph convolutional networks are used to perceive chemical environments and assign molecular mechanics (MM) force field parameters. The entire process of chemical perception and parameter assignment is differentiable end-to-end with respect to model parameters, allowing new force fields to be easily constructed from MM or QM force fields, extended, and applied to arbitrary biomolecules.}
 
 \newarticle{openff-evaluator}{Boothroyd S, Wang L-P, Mobley DL, \jdc, and Shirts MR}{The Open Force Field Evaluator: An automated, efficient, and scalable framework for the estimation of physical properties from molecular simulation}{\emph{Preprint}}{chemRxiv}{https://chemrxiv.org/engage/chemrxiv/article-details/610ad0ed45805d722f80e4de}{We describe a new software framework for automated evaluation of physical properties for the benchmarking and optimization of small molecule force fields according to best practices.}
 
-% new
-\newarticle{cache}{Ackloo S, Al-awar R, Amaro RE, Arrowsmith CH, Azevedo H, Batey RA, Bengio Y, Betz UAK, Bologa CG, \jdc, Cornell WD, Dunham I, Ecker GF, Edfeldt K, Edwards AM, Gilsom MK, Gordijo CR, Hessler G, Hillisch A, Hogner A, Irwin JJ, Jansen JM, Kuhn D, Leach AR, Lee AA, Lessel U, Moult J, Muegge I, Oprea TI, Perry BG, Riley, Singh Saikantendu K, Santhakumar V, Schapira M, Scholten C, Todd MH, Vedadi M, Volkamer A, and Wilson TM}{CACHE (Critical Assessment of Computational Hit-finding Experiments): A public-private partnership benchmarking initiative to enable the development of computational methods for hit-finding}{\emph{Preprint}}{chemRxiv}{https://doi.org/10.33774/chemrxiv-2021-rzq4n}{We describe CACHE: A new public-private partnership that aims to transform computer-aided drug discovery much the way that CASP transformed protein structure prediction into a reproducible, accurate engineering discipline.}
-
 \newarticle{affinity-benchmark-best-practices}{Hahn DF, Bayly CI, Bruce Macdonald HE, \jdc, Mey ASJS, Mobley DL, Perez Benito L, Schindler CEM, Tresadern G, Warren GL}{Best practices for constructing, preparing, and evaluating protein-ligand binding affinity benchmarks}{\emph{Preprint}}{ar$\chi$iv}{https://arxiv.org/abs/2105.06222}{This living best practices paper for the Living Journal of Computational Molecular Sciences describes the current community consensus in how to curate experimental benchmark data for assessing predictive affinity models for drug discovery, how to prepare these systems for affinity calculations, and how to assess the results to compare performance.}
-
-\newarticle{parsley}{Qiu Y, Smith DGA, Boothroyd B, Jang H, Wagner J, Bannan C, Gokey T, Lim VT, Stern CD, Rizzi A, Lucas X, Tjanaka B, Shirts MR$^\ddag$, Gilson MK$^\ddag$, \jdc$^\ddag$, Bayly CI$^\ddag$, Mobley DL$^\ddag$, Wang L-P$^\ddag$}{Development and benchmarking of Open Force Field v1.0.0, the Parsley small molecule force field}{\emph{Preprint}}{chemRxiv}{https://chemrxiv.org/articles/preprint/Development_and_Benchmarking_of_Open_Force_Field_v1_0_0_the_Parsley_Small_Molecule_Force_Field/13082561/1}{We present a new, modern small molecule force field for molecular design from the Open Force Field Initiative, a large industry-academic collaboration that focuses on open science, open data, and modern open source infrastructure.}
-
-\newarticle{2CLJQ}{Madin OC, Boothroyd S, Messerly RA, \jdc, Fass J, Shirts MR}{Bayesian inference-driven model parameterization and model selection for 2CLJQ fluid models}{\emph{Preprint}}{ar$\chi$iv}{https://arxiv.org/abs/2105.07863}{Here, we show how Bayesian inference can be used to automatically perform model selection and fit parameters for a molecular mechanics force field.}
 
 \newarticle{hybrid-qm-mm}{Rufa DA, Bruce Macdonald, HE, Fass J, Wieder M, Grinaway PB, Roitberg AE, Isayev O, and \jdc}{Towards chemical accuracy for alchemical free energy calculations with hybrid physics-based machine learning / molecular mechanics potentials}{\emph{Preprint}}{bioR$\chi$iv}{https://doi.org/10.1101/2020.07.29.227959}{In this first use of hybrid machine learning / molecular mechanics (ML/MM) potentials for alchemical free energy calculations, we demonstrate how the improved modeling of intramolecular ligand energetics offered by the quantum machine learning potential ANI-2x can significantly improve the accuracy in predicting kinase inhibitor binding free energy by reducing the error from 0.97~kcal/mol to 0.47~kcal/mol, which could drastically reduce the number of compounds that must be synthesized in lead optimization campaigns for minimal additional computational cost.}
 
@@ -389,14 +385,26 @@ $\ddag$ denotes co-corresponding authors}
 
 \section*{Published and In Press}
 
+% new
+\newarticle{cache}{Ackloo S, Al-awar R, Amaro RE, Arrowsmith CH, Azevedo H, Batey RA, Bengio Y, Betz UAK, Bologa CG, \jdc, Cornell WD, Dunham I, Ecker GF, Edfeldt K, Edwards AM, Gilsom MK, Gordijo CR, Hessler G, Hillisch A, Hogner A, Irwin JJ, Jansen JM, Kuhn D, Leach AR, Lee AA, Lessel U, Moult J, Muegge I, Oprea TI, Perry BG, Riley, Singh Saikantendu K, Santhakumar V, Schapira M, Scholten C, Todd MH, Vedadi M, Volkamer A, and Wilson TM}{CACHE (Critical Assessment of Computational Hit-finding Experiments): A public-private partnership benchmarking initiative to enable the development of computational methods for hit-finding}{\emph{Nature Reviews Chemistry}, 6:287, 2022}{DOI}{https://doi.org/10.1038/s41570-022-00363-z}{We describe CACHE: A new public-private partnership that aims to transform computer-aided drug discovery much the way that CASP transformed protein structure prediction into a reproducible, accurate engineering discipline.}
+
+%new
+\newarticle{sampl7-phip2}{Grosjean H, Isik M, Aimon A, Mobley D, \jdc, von Delft F, and Biggin PC}{SAMPL7 protein-ligand challenge: A community-wide evaluation of computational methods against fragment screening and pose-prediction}{\emph{Journal of Computer-Aided Molecular Design}, in press}{DOI}{https://doi.org/10.1007/s10822-022-00452-7}{We field a blind community challenge to assess how well state of the art computational chemistry methods can predict the binding modes of small druglike fragments to a protein target for which no chemical matter is known, PHIP2, using fragment screening at the Diamond Light Source.}
+
 %new
 \newarticle{ink4-cdk4}{Li Q, Jiang B, Guo J, Shao H, Del Priore IS, Chang Q, Kudo R, Li Z, Razavi P, Liu B, Boghossian AS, Rees MG, Ronan MM, Roth JA, Donovan KA, Palafox M, Reis-Filho JS, de Stanchina E, Fischer ES, Rosen N, Serra V, Koff A, \jdc, Gray NS, and Chandardlapaty S}{INK4 tumor suppressor proteins mediate resistance to CDK4/6 kinase inhibitors}{\emph{Cancer Discovery}, in press}{DOI}{http://dx.doi.org/10.1158/2159-8290.CD-20-1726}{We demonstrate CDK6 causes drug resistance by binding INK4 proteins, and develop bifunctional degraders conjugating palbociclib with E3 ligands to overcome this mechanism of resistance.}
 
 % new
-\newarticle{gcn2-activation}{Mellinghoff I, Tang CP, Clark O, Ferrarone J, Campos C, Lalani AS, \jdc, Intlekofer AM, and Elemento O}{GCN2 kinase Activation by ATP-competitive Kinase Inhibitors}{\emph{Nature Chemical BIology}, in press}{DOI}{https://doi.org/10.1038/s41589-021-00947-8}{We describe paradoxical activation of GCN2 kinase activity by the kinase inhibitor neratinib, and propose a model for how inhibitor-induced dimerization might cause this unusual activity.}
+\newarticle{gcn2-activation}{Mellinghoff I, Tang CP, Clark O, Ferrarone J, Campos C, Lalani AS, \jdc, Intlekofer AM, and Elemento O}{GCN2 kinase Activation by ATP-competitive Kinase Inhibitors}{\emph{Nature Chemical Biology}, 18:207, 2022}{DOI}{https://doi.org/10.1038/s41589-021-00947-8}{We describe paradoxical activation of GCN2 kinase activity by the kinase inhibitor neratinib, and propose a model for how inhibitor-induced dimerization might cause this unusual activity.}
 
 % new
-\newarticle{abl-mutant-kinetics}{Lyczek A, Tilman-Berger B, Rangwala AM, Paung Y, Tom J, Philipose H, Guo J, Albanese SK, Robers MB, Knapp S, \jdc, Seeliger MA}{Mutation in Abl kinase with altered drug binding kinetics indicates a novel mechanism of imatinib resistance}{\emph{Proceedings of the National Academy of Sciences} 118:e2111451118}{DOI}{https://doi.org/10.1073/pnas.2111451118}{Here, we characterize the biophysical mechanisms underlying mutants of Abl kinase associated with clinical drug resistance to targeted cancer therapies. We uncover a surprising novel mechanism of mutational resistance to kinase inhibitor therapy in which the off-rate for inhibitor unbinding is increased without affecting inhibitor affinity.}
+\newarticle{2CLJQ}{Madin OC, Boothroyd S, Messerly RA, \jdc, Fass J, Shirts MR}{Bayesian inference-driven model parameterization and model selection for 2CLJQ fluid models}{\emph{Journal of Chemical Informatics and Modeling}, 62:874, 2022}{DOI}{https://doi.org/10.1021/acs.jcim.1c00829}{Here, we show how Bayesian inference can be used to automatically perform model selection and fit parameters for a molecular mechanics force field.}
+
+% new
+\newarticle{parsley}{Qiu Y, Smith DGA, Boothroyd B, Jang H, Wagner J, Bannan C, Gokey T, Lim VT, Stern CD, Rizzi A, Lucas X, Tjanaka B, Shirts MR$^\ddag$, Gilson MK$^\ddag$, \jdc$^\ddag$, Bayly CI$^\ddag$, Mobley DL$^\ddag$, Wang L-P$^\ddag$}{Development and benchmarking of Open Force Field v1.0.0, the Parsley small molecule force field}{\emph{Journal of Chemical Theory and Computation}, 17:6262, 2021}{chemRxiv}{https://chemrxiv.org/articles/preprint/Development_and_Benchmarking_of_Open_Force_Field_v1_0_0_the_Parsley_Small_Molecule_Force_Field/13082561/1}{We present a new, modern small molecule force field for molecular design from the Open Force Field Initiative, a large industry-academic collaboration that focuses on open science, open data, and modern open source infrastructure.}
+
+% new
+\newarticle{abl-mutant-kinetics}{Lyczek A, Tilman-Berger B, Rangwala AM, Paung Y, Tom J, Philipose H, Guo J, Albanese SK, Robers MB, Knapp S, \jdc, Seeliger MA}{Mutation in Abl kinase with altered drug binding kinetics indicates a novel mechanism of imatinib resistance}{\emph{Proceedings of the National Academy of Sciences} 118:e2111451118}{DOI}{https://doi.org/10.1073/pnas.2111451118, 2021}{Here, we characterize the biophysical mechanisms underlying mutants of Abl kinase associated with clinical drug resistance to targeted cancer therapies. We uncover a surprising novel mechanism of mutational resistance to kinase inhibitor therapy in which the off-rate for inhibitor unbinding is increased without affecting inhibitor affinity.}
 
 % new
 \newarticle{knowable-covid-moonshot}{Lee A, \jdc, von Delft F}{Why we are developing a patent-free COVID antiviral therapy}{\emph{Knowable Magazine} 09.27.2021}{web}{https://knowablemagazine.org/article/health-disease/2021/why-we-are-developing-patentfree-covid-antiviral-therapy}{In this Opinion, we present the case for a new open science driven model for drug discovery for pandemics.}
@@ -1164,7 +1172,7 @@ NIH R01 GM121505 \\
 {\bf The role of reorganization energy in achieving selective kinase inhibition} \\
 The goal of this project is to probe the role of protein reorganization energy in achieving selectivity in targeted kinase inhibition with small molecules. \\
 9/1/2017 -- 8/31/2022 \\
-\$196,250 annual direct costs
+\$196,250 annual direct costs to the Chodera lab
 
 \vspace{1.5ex}
 
@@ -1179,7 +1187,7 @@ The goal of this project is to develop alchemical free energy methods for predic
 Relay Therapeutics Collaboration SK2018-0162\\
 {\bf Development of efficient open source cloud-enabled free energy based lead optimization algorithms and integrative Bayesian model of experimental biophysical and molecular simulation data} \\
 The goal of this project is to develop open source scalable cloud workflows for lead optimization using relative alchemical free energy calculations, as well as Bayesian integrative modeling techniques for experimental biophysical data and molecular simulations. \\
-4/5/2018 -- 4/4/2022 \\
+4/5/2018 -- 4/4/2023 \\
 \$124,828 annual direct costs to the Chodera lab
 
 \vspace{1.5ex}
@@ -1204,11 +1212,16 @@ The goal of this project is to identify key biophysical interactions necessary f
 % ACTIVE COLLABORATIVE GRANTS
 \subsubsection*{Collaborative Grants}
 
-Wellcome Trust Therapeutics Accelerator 224021/Z/21/Z (PI: Perry) \\
-{\bf Development of an investigational new drug from a novel, open-science, orally available small molecule anti-viral targeting SARS-CoV2 main protease}\\
-The goal of this project is to field an accelerated preclinical development program to reach IND-equivalent approval for a first-generation non-covalent oral antiviral targeting SARS-CoV-2 Mpro discovered by the COVID Moonshot. \\
-7/1/2021 -- 3/1/2023\\
-\$145,388 direct costs to the Chodera lab
+NIH NIAID U19 1U19AI171399-01 (MPI: Chodera [Contact PI]; Alpha Lee, Potera; Ben Perry, DNDi) \\
+{\bf AI-driven Structure-enabled Antiviral Platform (ASAP)}
+co-Is: Karla Kirkegaard (Stanford), Matt Bogyo (Stanford), Jesse Bloom (Fred Hutch), Frank von Delft (Diamond Light Source), Martin Walsh (Diamond Light Source), Alpha Lee (PostEra), Nir London (Weizmann), Ed Griffen (MedChemica), Laurent Fraisse (DNDi), Haim Barr (Weizmann), Daren Fearon (Diamond Light Source), Kris White (Mount Sinai), Adolfo Garc\'{i}a-Sastre (Mount Sinai), Randy Albrecht (Mount Sinai) \\
+05/01/2022 -- 04/30/2027\\
+\emph{The goal of this antiviral drug discovery (AViDD) Center is to use an AI-accelerated structure-enabled discovery platform to build a pipeline of novel oral antivirals against coronaviruses, flaviviruses, and picornaviruses using an open science, IP-free discovery paradigm to act as a nexus for global antiviral discovery.}\\
+Total federal funds requested: \$113,076,459\\
+Total direct costs: \$86,402,219\\
+Total direct costs less consortium F\&A: \$75,000,000\\
+Total F\&A for MSKCC: \$24,415,485 \\
+Note: Notice of Award has not yet arrived but we are told by NIAID to expect it prior to press release on 18 May 2022.
 
 \vspace{1.5ex}
 
@@ -1357,17 +1370,6 @@ None.
 
 \subsubsection*{Collaborative Grants}
 
-NIH NIAID U19 1U19AI171399-01 (MPI: Chodera [Contact PI]; Alpha Lee, Potera; Ben Perry, DNDi) \\
-{\bf AI-driven Structure-enabled Antiviral Platform (ASAP)}
-co-Is: Karla Kirkegaard (Stanford), Matt Bogyo (Stanford), Jesse Bloom (Fred Hutch), Frank von Delft (Diamond Light Source), Martin Walsh (Diamond Light Source), Alpha Lee (PostEra), Nir London (Weizmann), Ed Griffen (MedChemica), Laurent Fraisse (DNDi), Haim Barr (Weizmann), Daren Fearon (Diamond Light Source), Kris White (Mount Sinai), Adolfo Garc\'{i}a-Sastre (Mount Sinai), Randy Albrecht (Mount Sinai) \\
-05/01/2022 -- 04/30/2027\\
-\emph{The goal of this antiviral drug discovery (AViDD) Center is to use an AI-accelerated structure-enabled discovery platform to build a pipeline of novel oral antivirals against coronaviruses, flaviviruses, and picornaviruses using an open science, IP-free discovery paradigm to act as a nexus for global antiviral discovery.}\\
-Total federal funds requested: \$113,076,459\\
-Total direct costs: \$86,402,219\\
-Total direct costs less consortium F\&A: \$75,000,000\\
-Total F\&A for MSKCC: \$24,415,485
-
-\vspace{1.5ex}
 
 NIH NCI R01 GM145739‑01 (MPI: Chiosis/Gewirth)\\
 4/1/2022 -- 3/31/2027\\
@@ -1516,15 +1518,6 @@ NSF RAPID CHE2033426\\
 The goal of this proposal is to assess the accuracy of large-scale alchemical free energy calculations in identifying potent inhibitors of the SARS-CoV-2 main viral protease (Mpro) with the COVID Moonshot. \\
 7/1/2020 -- 6/30/2021\\
 \$112,994 direct costs to Chodera lab
-
-\vspace{1.5ex}
-
-
-Relay Therapeutics Sponsored Research Agreement SK2018-0162 \\
-{\bf Development of efficient open source cloud-enabled free energy based lead optimization algorithms and integrative Bayesian model of experimental biophysical and molecular simulation data} \\
-The goal of this project is to develop open source scalable cloud workflows for lead optimization using relative and absolute alchemical free energy calculations, as well as Bayesian integrative modeling techniques for experimental biophysical data and molecular simulations. \\
-4/5/2018 -- 4/5/2019 \\
-\$74,074 annual direct costs to the Chodera lab
 
 \vspace{1.5ex}
 
