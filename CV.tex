@@ -79,7 +79,26 @@
 \begin{adjustwidth}{-1in}{-1in}  
 \begin{tabular}{p{0.9in}p{7in}}
 %\parbox[c]{0.9in}{\includegraphics[width=0.9in]{thumbnails/{#1}}} & \parbox[c]{6in}{\setstretch{0.9} {\small #4} $\cdot$ \href{#6}{#5} \\ {\scriptsize {#2}} \\ \raggedright { \bf\nohyphens{#3}}  \\ {\footnotesize\emph {#7}}} % authors too small
-\parbox[c]{0.9in}{\includegraphics[width=0.9in]{thumbnails/#1}} & \parbox[c]{6in}{\setstretch{0.9} {\small #4} $\cdot$ \href{#6}{#5} \\ {\footnotesize {#2}} \\ \raggedright { \bf\nohyphens{#3}}  \\ {\footnotesize\emph {#7}}}
+\parbox[c]{0.9in}{\includegraphics[width=0.9in]{thumbnails/#1}} & \parbox[c]{6in}{\setstretch{0.9} {\small #4} $\cdot$ \href{#6}{#5} \\ {\footnotesize {#2}} \\ \raggedright { \bf\nohyphens{#3}}  \\ {\footnotesize\emph {#7}}} % big authors
+%\parbox[c]{0.9in}{\includegraphics[width=0.9in]{thumbnails/#1}} & \parbox[c]{6in}{\setstretch{0.9}  {\footnotesize {#2}} \\ \raggedright { \bf\nohyphens{\href{#6}{#3}}}  \\ {\footnotesize\emph {#7}}} % no journal names
+\end{tabular}
+\end{adjustwidth}
+\vspace{0.2in}
+}
+
+% COLLABORATION
+% #1 : thumbnail filename
+% #2 : name
+% #3 : dates
+% #4 : url
+% #5 : blurb / description
+\newcommand{\collaboration}[5]{
+\begin{adjustwidth}{-1in}{-1in}  
+\begin{tabular}{p{0.9in}p{7in}}
+%\parbox[c]{0.9in}{\includegraphics[width=0.9in]{thumbnails/{#1}}} & \parbox[c]{6in}{\setstretch{0.9} {\small #4} $\cdot$ \href{#6}{#5} \\ {\scriptsize {#2}} \\ \raggedright { \bf\nohyphens{#3}}  \\ {\footnotesize\emph {#7}}} % authors too small
+%\parbox[c]{0.9in}{\includegraphics[width=0.9in]{thumbnails/#1}} & \parbox[c]{6in}{\setstretch{0.9}{ \raggedright { \bf\nohyphens{#2}} \\  {\small #3} $\cdot$ \href{#4}{#4} \\ {\footnotesize\emph {#5}} }} % big authors
+\parbox[c]{0.9in}{\includegraphics[width=0.9in]{thumbnails/#1}} & \parbox[c]{6in}{\setstretch{0.9}{ \small \raggedright { \bf\nohyphens{#2}} ({#3}) $\cdot$ \href{#4}{#4} \\ {\footnotesize\emph {#5}} }} % big authors
+%\parbox[c]{0.9in}{\includegraphics[width=0.9in]{thumbnails/#1}} & \parbox[c]{6in}{\setstretch{0.9}  {\footnotesize {#2}} \\ \raggedright { \bf\nohyphens{\href{#6}{#3}}}  \\ {\footnotesize\emph {#7}}} % no journal names
 \end{tabular}
 \end{adjustwidth}
 \vspace{0.2in}
@@ -224,11 +243,9 @@ New York, NY 10065}
 
 \small
 
-\noindent\years{2019--2022}{\bf BIH Einstein Visiting Professor, Charit\'{e}, Berlin}\\
 \noindent\years{2019--}{\bf Associate Member, Memorial Sloan-Kettering Cancer Center}\\  % effective date 1/25/2019
-\noindent\years{2019--}{\bf Associate Professor, Physiology, Biophysics, and Systems Biology Program,\\
-Weill Cornell Graduate School of Medical Sciences}\\
-\noindent\years{2013--2019}{\bf Assistant Professor, Physiology, Biophysics, and Systems Biology Program,\\
+\noindent\years{2019--}{\bf BIH Einstein Visiting Professor, Charit\'{e}, Berlin}\\
+\noindent\years{2013--}{\bf Faculty, Physiology, Biophysics, and Systems Biology Program,\\
 Weill Cornell Graduate School of Medical Sciences}\\
 \noindent\years{2012--2019}{\bf Assistant Member, Memorial Sloan-Kettering Cancer Center}\\
 \noindent\years{2008--2012}{\bf Independent Distinguished Postdoctoral Fellow, California Institute for Quantitative Biosciences (QB3),\\
@@ -247,6 +264,7 @@ Undergraduate research with \href{http://www.its.caltech.edu/~phplab/phplab.html
 \section*{Fellowships and awards}
 \vspace{-0.15in}
 
+\noindent\years{2022--2024}Einstein Visiting Fellowship\\
 \noindent\years{2019--2022}BIH Einstein Visiting Fellowship\\
 \noindent\years{2017}Silicon Therapeutics Open Science Fellowship\\
 \noindent\years{2013--2016}Louis V.~Gerstner Young Investigator Award\\
@@ -279,16 +297,22 @@ Undergraduate research with \href{http://www.its.caltech.edu/~phplab/phplab.html
 %In addition, we employ the Folding@home worldwide distributed computing platform---where hundreds of thousands of donors around the world contribute their computing power~\cite{shirts-pande:science:2000:folding-at-home,folding-at-home-stats}---to study the conformational dynamics of cancer targets (such as kinases, small GTPases like Ras, and protein methyltransferases) in order to understand function, disease, and opportunities for allosteric modulation with small molecules.
 %Major collaborations with both academic laboratories and pharmaceutical companies use computation and biophysical experiment to explore various aspects of biomolecular dynamics, drug pharmacokinetics, design of biological therapeutics, new biophysical measurement and screening technologies, and emerging targets.
 
-{\bf My research focuses on reimagining the way we develop small molecule drugs and pair therapeutics with individual patient tumors by bringing physical modeling and structure-informed machine learning into the cancer genomics era.}
+{\bf My research aims to reimagine the way we develop small molecule drugs and pair therapeutics with individual patient tumors by bringing physical modeling and structure-informed machine learning into the cancer genomics era.}
 By combining novel algorithmic advances to achieve orders-of-magnitude efficiency gains with powerful but inexpensive GPU hardware, machine learning, and distributed computing technologies, my lab is developing next-generation approaches and open source software for predicting small molecule binding affinities, designing small molecules with desired properties, predicting drug sensitivity or resistance of clinical mutations, and understanding the detailed structural mechanisms underlying oncogenic mutations.
-We co-develop the \href{http://openmm.org}{OpenMM} GPU-powered molecular simulation framework, which powers numerous biomolecular modeling and simulation applications using physical modeling and machine learning. 
-As a core member of the \href{https://foldingathome.stanford.edu/about/the-foldinghome-consortium/}{Folding@home Consortium}, my lab harnesses the largest computing platform in the world---the first to reach an exaFLOP/s---pooling the efforts of a million volunteers around the world to study functional implications of mutations and new opportunities for therapeutic design against cancer targets and global pandemics.
-%We are also a core member of the \href{http://openforcefield.org}{Open Force Field Consortium}, an industry-funded open effort to develop better force fields for drug discovery and biomolecular modeling.
-I co-founded the \href{http://openforcefield.org}{Open Force Field Initiative}, a scientific collaboration funded by the NIH and an industry consortium consisting of dozens of scientists working to develop modern open source infrastructure for building and applying high-quality biomolecular force fields.
-I am a co-founder of the \href{http://postera.ai/covid}{COVID Moonshot}, a radical open science patent-free drug discovery effort aiming to develop an inexpensive small molecule therapy effective against COVID-19 and future coronavirus.
 Using automated biophysical measurements, my laboratory collects new experimental data targeted to advance the quantitative accuracy of our methodologies, and gather new insight into drug susceptibility and resistance in kinases and other cancer targets.
-My work makes extensive use of scalable Bayesian statistical inference, machine learning via probabilistic programming, and information theoretic principles for designing experiments and quantifying error.
-I am passionate about open science, disseminating scientific best practices, and maximizing research reproducibility.
+My work makes extensive use of scalable Bayesian statistical inference, machine learning via probabilistic programming, and information theoretic principles for designing optimal experiments.
+
+{\bf A major focus of the lab is the development of technologies required to enable fully autonomous decisionmaking in drug discovery}, empowering medicinal chemists to manage a portfolio of correlated drug discovery programs where they no longer need to make decisions about which molecules to make, but rather which objectives to achieve and which strategies to employ.
+This includes the development of automated, modular decisionmaking frameworks inspired by reinforcement learning; integration of automated synthetic route planning; new architectures for fast structure-enabled machine learning; rearchitecting alchemical free energy calculations for differentiable machine learning frameworks to introduce learnability; and scalable Bayesian inference frameworks for automated experimental design and interpretation.
+
+{\bf I am passionate about open science}, disseminating scientific best practices, and maximizing research reproducibility.
+
+{\bf I focus on training the next generation of interdisciplinary scientists for industrial drug discovery}, equipped to tackle the most challenging problems in health and human disease.
+
+%We co-develop the \href{http://openmm.org}{OpenMM} GPU-powered molecular simulation framework, which powers numerous biomolecular modeling and simulation applications using physical modeling and machine learning. 
+%As a core member of the \href{https://foldingathome.stanford.edu/about/the-foldinghome-consortium/}{Folding@home Consortium}, my lab harnesses the largest computing platform in the world---the first to reach an exaFLOP/s---pooling the efforts of a million volunteers around the world to study functional implications of mutations and new opportunities for therapeutic design against cancer targets and global pandemics.
+%We are also a core member of the \href{http://openforcefield.org}{Open Force Field Consortium}, an industry-funded open effort to develop better force fields for drug discovery and biomolecular modeling.
+%I am a co-founder of the \href{http://postera.ai/covid}{COVID Moonshot}, a radical open science patent-free drug discovery effort aiming to develop an inexpensive small molecule therapy effective against COVID-19 and future coronavirus.
 %I co-founded the \href{http://openforcefield.org}{Open Force Field Consortium}, an academic-industry collaboration to drive improvements in biomolecular forcefields with open code, open data, and open science.
 
 \setstretch{1.00} 
@@ -296,16 +320,101 @@ I am passionate about open science, disseminating scientific best practices, and
 \eject
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PUBLICATIONS
+% MAJOR COLLABORATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Major Collaborations}
+
+\setstretch{1.05} 
+
+\collaboration{covid-moonshot-logo-small}{The COVID Moonshot}{2020--}{https://covid.postera.ai/covid}{I co-founded the {\bf COVID Moonshot}, a global open science collaboration leveraging our free alchemical energy calculations on Folding@home to discovery a patent-free oral antiviral useful against COVID-19. Starting from an X-ray fragment screen, we produced SARS-CoV-2 main viral protease (Mpro) inhibitor preclinical candidates in just 18 months (\href{https://www.nature.com/articles/d41586-021-01571-1}{Nature Comment}). Together with the \href{http://dndi.org}{Drugs for Neglected Diseases initiative (DNDi)}---the world's leading nonprofit developing new therapies for neglected diseases---we were \href{https://dndi.org/press-releases/2021/covid-moonshot-funded-by-wellcome-to-rapidly-develop-safe-globally-accessible-affordable-antiviral-pill/}{awarded \$11M from the WHO Access to COVID Tools Accelerator (ACT-A) via the Wellcome Trust} to carry out an accelerated preclinical program, with clinical trials expected in 2023. We are working to make our antiviral----which has differentiated resistance liabilities and without the expected drug interaction issues of Paxlovid---available for global equitable and affordable access.}
+
+\collaboration{asap-logo-small}{AI-driven Structure-enabled Antiviral Platform (ASAP)}{2022--}{https://asapdiscovery.org}{Together with \href{http://dndi.org}{DNDi} and \href{http://postera.ai}{PostEra}, I lead the \href{http://asapdiscovery.org}{AI-driven Structure-enabled Antiviral Platform}, which \href{https://dndi.org/press-releases/2022/consortium-to-discover-antivirals-covid19-receives-nih-funding-develop-globally-accessible-treatments-pandemics/}{uses artificial intelligence and computational chemistry to accelerate structure-based open science antiviral drug discovery and deliver oral antivirals for pandemics with the goal of global, equitable, and affordable access}. I am the Contact PI on the \href{https://www.niaid.nih.gov/research/antiviral-drug-discovery-centers-pathogens-pandemic-concern}{NIH NIAID Antiviral Drug Discovery (AViDD) Center} that currently funds ASAP, which in May 2022 was \href{https://www.niaid.nih.gov/research/antiviral-drug-discovery-centers-pathogens-pandemic-concern-award-recipients}{awarded \$68M for the first three-year phase of a five-year \$110M program}.}
+
+\collaboration{foldingathome-logo-small}{Folding@home Consortium}{2012--}{http://foldingathome.org}{I am a founding member of the \href{https://foldingathome.org/about-2/the-foldinghome-consortium/}{Folding@home Consortium}, a worldwide network of laboratories that run the \href{http://foldingathome.org}{Folding@home global distributed computing project} where hundreds of thousands of volunteers around the world (mostly gamers with GPUs) contribute idle computing cycles to enable us to study molecular mechanisms of disease and search for new potential therapeutics. As part of the COVID Moonshot effort, \href{https://www.nature.com/articles/s41557-021-00707-0}{Folding@home became the world's first exascale distributed computing platform in 2020}. Using our alchemical free energy methodologies on Folding@home, we accelerated lead optimization for preclinical candidates for the COVID Moonshot that are expected to enter clinical trials in 2023.}
+
+\collaboration{openmm7-logo}{OpenMM molecular simulation framework}{2006--}{http://openmm.org}{I co-lead the \href{https://openmm.org/development}{OpenMM Consortium}, which develops an open source GPU-accelerated molecular simulation package used both as a stand-alone tool for biomolecular simulation and as a library to enable other tools to use biomolecular simulation, such as \href{https://isolde.cimr.cam.ac.uk/}{Isolde} and \href{https://www.deepmind.com/research/highlighted-research/alphafold}{AlphaFold2}. OpenMM is the fastest and most widely deployed GPU-accelerated biomolecular simulation package globally, and has been downloaded over 1.2 million times. OpenMM is currently \href{https://openmm.org/development}{funded by the NIH} to effect a transformation in the biomolecular simulation community to enable the use of fast, accurate machine-learning force fields.}
+
+\collaboration{openforcefield-logo-small}{Open Force Field Initiative and Consortium}{2019--}{http://openforcefield.org}{I co-founded the \href{https://openforcefield.org/about/organization/\#open-force-field-initiative}{Open Force Field Initiative} (an NIH-funded collaboration) and related \href{https://openforcefield.org/about/organization/\#open-force-field-consortium}{Open Force Field Consortium} (funded by over a dozen industry partners), a scientific collaboration consisting of dozens of scientists around the world working to develop modern open source infrastructure for building and applying high-quality biomolecular force fields for accelerating drug discovery. These force fields and tools are used by pharma and academic labs around the world, and recently aided the discovery of a new preclinical candidate by the COVID Moonshot.}
+
+\collaboration{samplchallenges-logo-small}{Statistical Assessment of the Modeling of Proteins and Ligands (SAMPL)}{2012--}{https://samplchallenges.github.io}{I co-organize the \href{https://samplchallenges.github.io/}{SAMPL Challenges}, which are iterative blind predictive modeling challenges for the computational chemistry community aimed at accelerating the generation of solutions to major obstacles limiting the progress of computer-aided drug discovery and focusing the community and emphasizing knowledge sharing. The learnings from these challenges have been reported in over \href{14 special issues of the Journal for Computer-Aided Molecular Design}. In some areas, we have managed to move computational methods for wide disagreement among methods to tightly-grouped predictions that can identify when the experimental data is wrong.}
+
+\collaboration{cache}{Critical Assessment of Computational Hit-finding Experiments (CACHE)}{2019--}{https://cache-challenge.org/}{I co-founded the \href{https://cache-challenge.org/}{CACHE Challenge}, which aims to be the "CASP for hit-finding in drug discovery" by providing a new generation of AI- and physics-driven approaches to assess and refine their hit identification approaches against experimental data. Each CACHE Challenge focuses on identifying new chemical matter against an orphan target protein of pharmaceutical relevance, and all experimental data and compounds are disclosed into the public domain to accelerate drug discovery against these targets.}
+
+\collaboration{omsf-logo-small}{Open Molecular Software Foundation (OMSF)}{2019--}{http://openforcefield.org}{I work closely with the \href{http://omsf.io}{Open Molecular Software Foundation (OMSF)}, a 501(c)3 nonprofit organization that aims to be thoughtful stewards for the biomolecular modeling and computer-aided drug discovery open source software communities. Using a funding mechanism I helped pioneer, OMSF can act as a fiscal sponsor that works with open source software communities in the biomolecular sciences to aid them in becoming self-governing organizations that serve the community with fiscally sustainable support from industrial, federal, and philanthropic sources. OMSF currently hosts the \href{http://openforcefield.org}{Open Force Field Initiative and Consortium}, the \href{http://openfree.energy}{Open Free Energy Consortium}, and \href{https://openfold.io/}{OpenFold Consortium}.}
+
+%\eject
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SCIENTIFIC ADVISORY BOARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Scientific Advisory Boards}
+
+
+\collaboration{schrodinger-logo-small}{Schrodinger}{2013--2018}{http://schrodinger.com}{I joined the Schrodinger SAB shortly after their first release of the \href{https://www.schrodinger.com/products/fep}{FEP+} alchemical free energy calculation tool, aiming to ensure the first commercial turnkey product version of my field of alchemical free energy calculations had maximum impact for structure-enabled drug discovery. This effort was highly successful, with FEP+ near-universally used by industry to accelerate structure-enabled drug discovery efforts. I left in 2018 to focus my efforts on new, more scalable technologies and ways to use these tools for frontier problems in drug discovery.}
+
+\collaboration{openeye-logo-small}{OpenEye Scientific}{2018--}{https://www.eyesopen.com}{I joined the OpenEye SAB excited to help enable an ecosystem of open source computer-aided drug discovery tools and academic research that could rapidly be translated into impactful deployment within both industry and academia using their \href{https://www.eyesopen.com/orion}{Orion cloud-based drug discovery platform}. OpenEye was recenly acquired by Cadence for \$500M.}
+
+\collaboration{interline-logo-small}{Interline Therapeutics}{2021--}{https://www.interlinetx.com}{I am a founding SAB member and scientific cofounder of Interline Therapeutics, which has raised \$92M since its inception in 2021. Interline seeks to harness open source alchemical free energy methodologies that I developed to tackle problems in target and conformational selectivity to enable the design of small molecules that modulate protein communities.}
+
+\collaboration{ventus-logo-small}{Ventus Therapeutics}{2021--}{https://www.ventustx.com}{Ventus is a rapidly growing small molecule discovery company that has raised over \$300M in three funding rounds. In addition to feating extraordinary medicinal chemistry talent, Ventus has developed a novel computational platform, ReSOLVE, to accelerate novel chemotype hit discovery for new targets. I joined the SAB to advise on the integration of structure-enabled open source computer-aided drug discovery workflows to accelerate hit-to-candidate progression.}
+
+\collaboration{redesign-logo-small}{Redesign Science}{2020--}{https://www.redesignscience.com}{Redesign Science is a NYC-based startup aiming to commercialize technologies I helped develop as a graduate student---the construction of Markov state models of coarse-grained biomolecular dynamics from distributed biomolecular simulations---to use as a platform to accelerate drug discovery.}
+
+\eject
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SOFTWARE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Software}
 
 \setstretch{1.05} 
 
-Major codes developed by our lab can be found at \url{http://choderalab.org/code}
+All software developed by our lab can be found at \url{http://github.com/choderalab}
+
+%Major codes developed by our lab can be found at \url{http://choderalab.org/code}
 
 All software is licensed under permissive \href{http://opensource.org}{OSI}-approved open source licenses and available on \href{http://github.com/choderalab}{GitHub}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SIGNIFICANT PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Significant Publications}
+
+\newarticle{covid-moonshot-logo-small}{The COVID Moonshot Consortium, \jdc$\ddag$, Lee A$\ddag$, London N$\ddag$, von Delft F$\ddag$}{Open science discovery of oral non-covalent SARS-CoV-2 main protease inhibitors}{\emph{Preprint}}{bioRxiv}{https://doi.org/10.1101/2020.10.29.339317}{We report the discovery of a new oral antiviral non-covalent SARS-CoV-2 main protease inhibitor developed by the COVID Moonshot, a global open science collaboration leveraging free energy calculations on Folding@home and ML-accelerated synthesis planning, now in accelerated preclinical studies funded by an \$11M grant from the WHO ACT-A program via the Wellcome Trust. We are currently in discussions with generics manufacturers about partnering with us throughout clinical trials (expected to begin in 2023) to ensure we can scale up production for global equitable and affordable access once approved by regulatory agencies.}
+
+\newarticle{qml-explicit-free-energy}{Wieder M, Fass J, and \jdc}{Teaching free energy calculations to learn from experimental data}{\emph{Preprint}}{bioRxiv}{https://doi.org/10.1101/2021.08.24.457513}{In this pioneering work, we show, for the first time, how we can use machine learning to systematically improve explicit solvent alchemical free energy calculations using fully machine learning force fields by fitting directly to experimental free energies. This is also the first work to show how to compute alchemical free energies in explicit solvent using fully machine learning force fields, and the first to show how this can also involve breaking and forming covalent bonds..}
+
+\newarticle{hybrid-qm-mm}{Rufa DA, Bruce Macdonald, HE, Fass J, Wieder M, Grinaway PB, Roitberg AE, Isayev O, and \jdc}{Towards chemical accuracy for alchemical free energy calculations with hybrid physics-based machine learning / molecular mechanics potentials}{\emph{Preprint}}{bioR$\chi$iv}{https://doi.org/10.1101/2020.07.29.227959}{In this first use of hybrid machine learning / molecular mechanics (ML/MM) potentials for alchemical free energy calculations, we demonstrate how the improved modeling of intramolecular ligand energetics offered by the quantum machine learning potential ANI-2x can significantly improve the accuracy in predicting kinase inhibitor binding free energy by reducing the error from 0.97~kcal/mol to 0.47~kcal/mol, which could drastically reduce the number of compounds that must be synthesized in lead optimization campaigns for minimal additional computational cost.}
+
+\newarticle{espaloma.jpg}{Wang Y, Fass J, and \jdc}{End-to-end differentiable molecular mechanics force field construction}{\emph{Chemical Science}, in press}{ar$\chi$iv}{https://arxiv.org/abs/2010.01196}{Molecular mechanics force fields have been a workhorse for computational chemistry and drug discovery. Here, we propose a new approach to force field parameterization in which graph convolutional networks are used to perceive chemical environments and assign molecular mechanics (MM) force field parameters. The entire process of chemical perception and parameter assignment is differentiable end-to-end with respect to model parameters, allowing new force fields to be easily constructed from MM or QM force fields, extended, and applied to arbitrary biomolecules.}
+
+\newarticle{foldingathome-covid-cryptic-pockets}{Zimmerman MI, Porter JR, Ward MD, Singh S, Vithani N, Meller A, Mallimadugula UL, Kuhn CE, Borowsky JH, Wiewiora RP, Hurley, MFD, Harbison AM, Fogarty CA, Coffland JE, Fadda E, Voelz VA, \jdc, Bowman GR}{SARS-CoV-2 simulations go exascale to predict dramatic spike opening and cryptic pockets across the proteome}{\emph{Nature Chemistry} 13:651, 2021}{DOI}{https://doi.org/10.1038/s41557-021-00707-0}{To accelerate a multitude of drug development activities to combat the global threat posed by COVID-19, over a million citizen scientists have banded together through the Folding@home distributed computing project to create the world’s first Exascale computer and simulate protein dynamics. An unprecedented 0.1 seconds of simulation of the viral proteome reveal how the spike complex uses conformational masking to evade an immune response, conformational changes implicated in the function of other viral proteins, and cryptic pockets that are absent in experimental structures. These structures and mechanistic insights present new targets for the design of therapeutics.}
+
+\newarticle{vir-cell-xray}{Thompson EC, Rosen LE, Shepherd JG, Spreafico R, da Silva Filipe A, Wojcechowskyj JA, Davis C, Piccoli L, Pascall DJ, Dillen J, Lytras S, Czudnochowski N, Shah R, Meury M, Jesudason N, De Marco A, Li K, Bassi J, O'Toole A, Pinto D, Colquhoun RM, Culap K, Jackson B, Zatta F, Rambaut A, Jaconi S, Sreenu VB, Nix J, Zhang I, Jarrett RF, Glass WG, Beltramello M, Nomikou K, Pizzuto M, Tong L, Cameroni E, Cross TI, Johnson N, Di Iulio J, Wickenhagen A, Ceschi A, Harbison AM, Mair D, Ferrari P, Smollett K, Sallusto F, Carmichael S, Garzoni C, Nichols J, Galli M, Hughes J, Riva A, Ho A, Schiuma M, Semple MG, Openshaw PJM, Fadda E, Baillie JK, \jdc, Rihn SJ, Lycet SJ, Virgin HW, Telenti A, Corti D, Robertson DL, Snell J, ISARIC4C Investigators}{Circulating SARS-CoV-2 spike N439K variants maintain fitness while evading antibody-mediated immunity}{\emph{Cell} 184:1171, 2021}{DOI}{https://doi.org/10.1016/j.cell.2021.01.037}{New mutations that enhance the affinity of SARS-CoV-2 spike protein for human ACE2—and potentially pose threats to antibody-based therapeutics and vaccines for COVID-19—are already emerging in the wild. We characterize and describe sentinel mutations of SARS-CoV-2 in the wild that herald challenges for combatting COVID-19, and use simulations of the RBD-ACE2 interface on Folding@home to biophysically characterize why these mutations can lead to enhanced affinity.}
+
+\newarticle{setd8-msm}{Rafal P. Wiewiora$^\dag$, Shi Chen$^\dag$, Fanwang Meng, Nicolas Babault, Anqi Ma, Wenyu Yu, Kun Qian, Hao Hu, Hua Zou, Junyi Wang, Shijie Fan, Gil Blum, Fabio Pittella-Silva, Kyle A. Beauchamp, Wolfram Tempel, Hualing Jiang, Kaixian Chen, Robert Skene, Y. George Zheng, Peter J. Brown, Jian Jin, \jdc$^\ddag$, and Minkui Luo$^\ddag$}{The dynamic conformational landscapes of the protein methyltransferase SETD8}{Submitted}{bioR$\chi$iv}{https://doi.org/10.1101/438994}{In this work, we show how targeted X-ray crystallography using covalent inhibitors and depletion of native ligands to reveal structures of low-population hidden conformations can be combined with massively distributed molecular simulation to resolve the functional dynamic landscape of the protein methyltransferase SETD8 in unprecedented atomistic detail. Using an aggregate of six milliseconds of fully atomistic simulation from Folding\@home, we use Markov state models to illuminate the conformational dynamics of this important epigenetic protein.}
+
+\newarticle{ddr1-dfg-pmf}{Hanson SM$^*$, Georghiou G$^*$, Miller WT, Rest JS, \jdc$\ddag$, and Seeliger MA$\ddag$}{What makes a kinase promiscuous for inhibitors?}{\emph{Cell Chemical Biology} 26:390, 2019}{DOI}{https://doi.org/10.1016/j.chembiol.2018.11.005}{Using a combination of chemogenomics, structural biology, and molecular simulation approaches, we identify a set of human kinases that are especially promiscuous binders of small molecule kinase inhibitors, and show that a prototypical member of this class, DDR1, achieves this promiscuity by virtue of its more stable Asp-DFG-out conformation.}
+
+\newarticle{kinase-mutations}{Hauser K, Negron C, Albanese SK, Ray S, Steinbrecher T, Abel R, and \jdc, and Wang L}{Predicting resistance of clinical Abl mutations to targeted kinase inhibitors using alchemical free-energy calculations}{\emph{Communications Biology} 1:70, 2018}{DOI}{https://doi.org/10.1038/s42003-018-0075-x}{The emergence of resistance mutations are a significant problem in precision cancer therapy. With cancer centers now routinely collecting tumor sequencing panels, it is apparent the vast majority of missense mutations in kinases---for which more than 36 small molecule inhibitors are available---are very rare, and no information will be available as to whether these mutations might reduce therapeutic efficacy for some inhibitors by inducing drug resistance. Here, we take the first steps toward using physical modeling to predict individualized therapeutic response, assessing how accurately the impact of clinical Abl mutations on inhibitor binding affinity can be predicted. Our results suggest free energy calculations are a promising tool for aiding therapeutic decisionmaking.}
+
+\newarticle{aurka-phosphorylation}{Ruff EF, Muretta JM, Thompson A, Lake E, Cyphers S, Albanese SK, Hanson SM, Behr JM, Thomas DT, \jdc, and Levinson NM}{A dynamic mechanism for allosteric activation of Aurora kinase A by activation loop phosphorylation}{\emph{eLife} 7:e32766, 2018}{DOI}{https://doi.org/10.7554/eLife.32766}{Kinase phosphorylation is canonically believed to induce a conformational change of the DFG loop that borders the ATP binding site from out to in. Surprisingly, it seems that not all kinases behave this way. Through a combination of FRET, IR, and EPR labeling and large-scale molecular dynamics simulations, we show that phorphorylation activates Aurora kinase by a novel mechanism that does not simply correspond to a DFG-out to DFG-in population shift, but rather reorganization of DFG-in subpopulations. This paper follows our prior report in \emph{Nature Chemical Biology} on the role of Tpx2 in activating a cellular subpopulation of Aurora by another surprising mechanism.}
+
+%\newarticle{mtor-mutations.pdf}{Xu~J, Pham~CG, Albanese~SK, Dong~Y, Oyama~T, Lee~CH, Rodrik-Outmezguine~V, Yao~Z, Han~S, Chen~D, Parton~DL, \jdc, Rosen~N, Cheng~EH, and Hsieh~JJ}{Mechanistically distinct cancer-associated mTOR activation clusters predict sensitivity to rapamycin}{\emph{Journal of Clinical Investigation} 126:3529, 2016}{DOI}{https://doi.org/10.1172/JCI86120}{We use massively parallel distributed molecular simulations on Folding\@home to probe the mechanism activating mutations of the mTOR kinase identified in clinical populations.  {\color{red}Expand to paragraph.}}
+
+\newarticle{kinome-expression-tree}{Albanese SK*, Parton DL*, Isik M$\dag$, Rodr\'{i}guez-Laureano L$\dag$, Hanson SM, Gradia S, Jeans C, Levinson NM, Seeliger M, and \jdc}{An open library of human kinase domain constructs for automated bacterial expression}{\emph{Biochemistry} 57:4675, 2018}{DOI}{http://doi.org/10.1021/acs.biochem.7b01081}{To establish a tractable experimental system for studying the biophysical determinants of selective kinase inhibitor resistance in clinical cancer mutations, we engineer a library of human kinase domains with useful bacterial expression with phosphatase coexpression. Over 350 requests have been made for these plasmids.}
+
+%\newarticle{ensembler.pdf}{Parton DL, Grinaway PB, Hanson SM, Beauchamp KA, and \jdc}{Ensembler: Enabling high-throughput molecular simulations at the superfamily scale}{\emph{PLoS Computational Biology} 12:e1004728, 2016}{DOI}{http://dx.doi.org/10.1371/journal.pcbi.1004728} {Traditionally, biomolecular simulations has focused on the study of one protein at a time. In the modern genome-enabled, high-throughput world, however, there is much to be gained by studying entire families, superfamilies, or mutational variants at the same time. To overcome the lack of tools in our field to make this possible, we developed a new high-throughput pipeline to enable massively parallel molecular simulation studies of biomolecular dynamics at the superfamily scale, illustrating its application to protein tyrosine kinases, an important class of drug targets in cancer.}
+
+%\newarticle{identifying-ligand-binding-sites.pdf}{Wang K, \jdc, Yang Y, and Shirts MR}{Identifying ligand binding sites and poses using GPU-accelerated Hamiltonian replica exchange molecular dynamics}{\emph{Journal of Computer Aided Molecular Design} 27:989--1007, 2013}{DOI}{http://dx.doi.org/10.1007/s10822-013-9689-8}{This paper was the first to demonstrate how GPU-accelerated molecular dynamics can be used to compute binding free energies, using Hamiltonian replica exchange methodologies that are now in standard use in drug discovery through both academic codes and commercial products, such as Schrodinger FEP+. In addition, we demonstrated how we could use this technique to identify binding sites that may be previously unknown.}
+
+%\newarticle{ncmc.pdf}{Nilmeier JP, Crooks GE, Minh DDL, and \jdc}{Nonequilibrium candidate Monte Carlo is an efficient tool for equilibrium simulation}{\emph{Proceedings of the National Academy of Sciences} 108:E1009, 2011}{DOI}{http://dx.doi.org/10.1073/pnas.1106094108}{We present a significant generalization of Monte Carlo methods that provide an enormously useful tool for enhancing the efficiency of molecular simulations and enabling molecular design. This technique allows astronomical increases in acceptance rates---such as efficiency gains of 10$^{30}$---allowing efficient Monte Carlo proposals for part of the system to be effectively mixed with molecular dynamics. This approach is now allowing our lab to dynamically treat protonation states, insert/delete counterions, rapidly reorient ligands in binding sites, and sample over chemical species within a single simulation.}
+
+\eject
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % PUBLICATIONS
@@ -322,9 +431,10 @@ MyNCBI Bibliography: \href{http://goo.gl/e3kjgK}{http://goo.gl/e3kjgK} \\
 bioR$\chi$iv preprints: \href{https://bit.ly/2LHGwxJ}{https://bit.ly/2LHGwxJ} \\
 ar$\chi$iv preprints: \href{https://bit.ly/2Rp2Y3T}{https://bit.ly/2Rp2Y3T} \\
 chemRxiv preprints: \href{https://chemrxiv.org/search?q=chodera}{https://chemrxiv.org/search?q=chodera} \\
-Open source software: \href{http://choderalab.org/code}{http://choderalab.org/code}\\
+%Open source software: \href{http://choderalab.org/code}{http://choderalab.org/code}\\
+Open source software: \href{http://github.com/choderalab}{http://github.com/choderalab}\\
 Major datasets: \href{http://choderalab.org/data}{http://choderalab.org/data} \\
-{\small \it h-index: 54 / i10-index: 102 / citations: 16143 (14 May 2022)} \\
+{\small \it h-index: 56 / i10-index: 106 / citations: 16997 (3 Sep 2022)} \\
 {\scriptsize $^*$ denotes co-first-authors \\
 $\dag$ denotes co-second-authors \\
 $\ddag$ denotes co-corresponding authors}
@@ -347,30 +457,31 @@ $\ddag$ denotes co-corresponding authors}
 %\vspace{-0.2in}
 
 %%%%%%%%%%%%
-\section*{Recent preprints}
+\section*{Submitted, Under Review, and Preprints}
+
+{\bf Open science antiviral discovery}\\
 
 % new
-\newarticle{covid-moonshot-logo-small}{The COVID Moonshot Consortium, \jdc$\ddag$, Lee A$\ddag$, London N$\ddag$, von Delft F$\ddag$}{Open science discovery of oral non-covalent SARS-CoV-2 main protease inhibitors}{\emph{Preprint}}{bioRxiv}{https://doi.org/10.1101/2020.10.29.339317}{We describe the discovery of a new oral non-covalent SARS-CoV-2 main protease inhibitor developed by the COVID Moonshot, a global open science collaboration leveraging free energy calculations on Folding@home and ML-accelerated synthesis planning, poised to enter preclinical studies.}
+\newarticle{covid-moonshot-logo-small}{The COVID Moonshot Consortium, \jdc$\ddag$, Lee A$\ddag$, London N$\ddag$, von Delft F$\ddag$}{Open science discovery of oral non-covalent SARS-CoV-2 main protease inhibitors}{\emph{Preprint}}{bioRxiv}{https://doi.org/10.1101/2020.10.29.339317}{We report the discovery of a new oral antiviral non-covalent SARS-CoV-2 main protease inhibitor developed by the COVID Moonshot, a global open science collaboration leveraging free energy calculations on Folding@home and ML-accelerated synthesis planning, now in accelerated preclinical studies funded by an \$11M grant from the WHO ACT-A program via the Wellcome Trust. We are currently in discussions with generics manufacturers about partnering with us throughout clinical trials (expected to begin in 2023) to ensure we can scale up production for global equitable and affordable access once approved by regulatory agencies.}
 
-\newarticle{qml-explicit-free-energy}{Wieder M, Fass J, and \jdc}{Teaching free energy calculations to learn from experimental data
-}{\emph{Preprint}}{bioRxiv}{https://doi.org/10.1101/2021.08.24.457513}{We describe a new software framework for automated evaluation of physical properties for the benchmarking and optimization of small molecule force fields according to best practices.}
+{\bf Introducing learnability into biomolecular modeling for drug discovery}\\
+
+\newarticle{qml-explicit-free-energy}{Wieder M, Fass J, and \jdc}{Teaching free energy calculations to learn from experimental data}{\emph{Preprint}}{bioRxiv}{https://doi.org/10.1101/2021.08.24.457513}{In this pioneering work, we show, for the first time, how we can use machine learning to systematically improve explicit solvent alchemical free energy calculations using fully machine learning force fields by fitting directly to experimental free energies. This is also the first work to show how to compute alchemical free energies in explicit solvent using fully machine learning force fields, and the first to show how this can also involve breaking and forming covalent bonds..}
+
+\newarticle{hybrid-qm-mm}{Rufa DA, Bruce Macdonald, HE, Fass J, Wieder M, Grinaway PB, Roitberg AE, Isayev O, and \jdc}{Towards chemical accuracy for alchemical free energy calculations with hybrid physics-based machine learning / molecular mechanics potentials}{\emph{Preprint}}{bioR$\chi$iv}{https://doi.org/10.1101/2020.07.29.227959}{In this first use of hybrid machine learning / molecular mechanics (ML/MM) potentials for alchemical free energy calculations, we demonstrate how the improved modeling of intramolecular ligand energetics offered by the quantum machine learning potential ANI-2x can significantly improve the accuracy in predicting kinase inhibitor binding free energy by reducing the error from 0.97~kcal/mol to 0.47~kcal/mol, which could drastically reduce the number of compounds that must be synthesized in lead optimization campaigns for minimal additional computational cost.}
 
 % new
 \newarticle{nnp-mm}{Galvelis R, Varela-Rial A, Doerr S, Fino R, Eastman P, Markland TE,  \jdc, and de~Fabritiis G}{NNP/MM: Fast molecular dynamics simulations with machine learning potentials and molecular mechanics}{\emph{Preprint}}{ar$\chi$iv}{https://arxiv.org/abs/2201.08110}{We demonstrate that a new generation of quantum machine learning (QML) potentials based on neural networks---which can achieve quantum chemical accuracy at a fraction of the cost---can be implemented efficiently in the OpenMM molecular dynamics simulation engine as part of hybrid machine learning / molecular mechanics (ML/MM) potentials that promise to deliver superior accuracy for modeling protein-ligand interactions.}
 
-\newarticle{espaloma.jpg}{Wang Y, Fass J, and \jdc}{End-to-end differentiable molecular mechanics force field construction}{\emph{Preprint}}{aR$\chi$iv}{https://arxiv.org/abs/2010.01196}{Molecular mechanics force fields have been a workhorse for computational chemistry and drug discovery. Here, we propose a new approach to force field parameterization in which graph convolutional networks are used to perceive chemical environments and assign molecular mechanics (MM) force field parameters. The entire process of chemical perception and parameter assignment is differentiable end-to-end with respect to model parameters, allowing new force fields to be easily constructed from MM or QM force fields, extended, and applied to arbitrary biomolecules.}
+\eject
 
-\newarticle{openff-evaluator}{Boothroyd S, Wang L-P, Mobley DL, \jdc, and Shirts MR}{The Open Force Field Evaluator: An automated, efficient, and scalable framework for the estimation of physical properties from molecular simulation}{\emph{Preprint}}{chemRxiv}{https://chemrxiv.org/engage/chemrxiv/article-details/610ad0ed45805d722f80e4de}{We describe a new software framework for automated evaluation of physical properties for the benchmarking and optimization of small molecule force fields according to best practices.}
-
-\newarticle{affinity-benchmark-best-practices}{Hahn DF, Bayly CI, Bruce Macdonald HE, \jdc, Mey ASJS, Mobley DL, Perez Benito L, Schindler CEM, Tresadern G, Warren GL}{Best practices for constructing, preparing, and evaluating protein-ligand binding affinity benchmarks}{\emph{Preprint}}{ar$\chi$iv}{https://arxiv.org/abs/2105.06222}{This living best practices paper for the Living Journal of Computational Molecular Sciences describes the current community consensus in how to curate experimental benchmark data for assessing predictive affinity models for drug discovery, how to prepare these systems for affinity calculations, and how to assess the results to compare performance.}
-
-\newarticle{hybrid-qm-mm}{Rufa DA, Bruce Macdonald, HE, Fass J, Wieder M, Grinaway PB, Roitberg AE, Isayev O, and \jdc}{Towards chemical accuracy for alchemical free energy calculations with hybrid physics-based machine learning / molecular mechanics potentials}{\emph{Preprint}}{bioR$\chi$iv}{https://doi.org/10.1101/2020.07.29.227959}{In this first use of hybrid machine learning / molecular mechanics (ML/MM) potentials for alchemical free energy calculations, we demonstrate how the improved modeling of intramolecular ligand energetics offered by the quantum machine learning potential ANI-2x can significantly improve the accuracy in predicting kinase inhibitor binding free energy by reducing the error from 0.97~kcal/mol to 0.47~kcal/mol, which could drastically reduce the number of compounds that must be synthesized in lead optimization campaigns for minimal additional computational cost.}
+{\bf Force field parameterization}\\
 
 \newarticle{fragmenter}{Stern CD, Bayly CI, Smith DGA, Fass J, Wang L-P, Mobley DL, and \jdc}{Capturing non-local through-bond effects when fragmenting molecules for quantum chemical torsion scans}{\emph{Preprint}}{bioR$\chi$iv}{https://doi.org/10.1101/2020.08.27.270934}{We show how the Wiberg Bond Order (WBO) can be used to construct small molecule fragmentation schemes that will avoid disrupting the chemical environment around torsions. The resulting fragmentation scheme powers the QCSubmit tool used to fragment and inject small molecule datasets into the QCFractal computation pipeline for deposition into the QCArchive quantum chemistry archive the Open Force Field Initiative uses for constructing force fields, as well as powering bespoke torsion refitting for individual molecules.}
 
-\newarticle{alchemical-best-practices}{Mey ASJS$^\ddag$, Allen B, Bruce Macdonald HE, \jdc$^\ddag$, Kuhn M, Michel J, Mobley DL$^\ddag$, Naden LN, Prasad S, Rizzi A, Scheen J, Shirts MR$^\ddag$, Tresadern G, and Xu H}{Best practices for alchemical free energy calculations}{\emph{Preprint}}{ar$\chi$iv}{https://arxiv.org/abs/2008.03067}{This living review for the Living Journal of Computational Molecular Sciences (LiveCoMS) covers the essential considerations for running alchemical free energy calculations for rational molecular design for drug discovery.}
-
 \newarticle{gimlet}{Wang Y, Fass J, Stern CD, and \jdc}{Graph nets for partial charge prediction}{\emph{Preprint}}{ar$\chi$iv}{https://arxiv.org/abs/1909.07903}{Graph convolutional and message-passing networks can be a powerful tool for predicting physical properties of small molecules when coupled to a simple physical model that encodes the relevant invariances. Here, we show the ability of graph nets to predict partial atomic charges for use in molecular dynamics simulations and physical docking.}
+
+{\bf Experimental best practices}\\
 
 \newarticle{itc-worksheet}{Boyce SE, Tellinghuisen JT, and \jdc}{Avoiding accuracy-limiting pitfalls in the study of protein-ligand interactions with isothermal titration calorimetry}{\emph{Preprint}}{bioR$\chi$iv}{http://dx.doi.org/10.1101/018036}{We demonstrate how to avoid accuracy-limiting problems in standard isothermal calorimetry experiments as well as capture the primary sources of uncertainty in thermodynamic parameters.}
 
@@ -383,40 +494,85 @@ $\ddag$ denotes co-corresponding authors}
 
 %%%%%%%%%%%%
 
+\section*{Reviews and Commentaries}
+
+{\bf Open science and globally equitable drug discovery}\\
+
+\newarticle{covid-moonshot-nature-commentary}{von Delft F, Calmiano M, \jdc, Griffen E, Lee A, London N, Matviuk T, Perry B, Robinson M, and von Delft A}{A white-knuckle ride of open COVID drug discovery}{\emph{Nature} 594:330, 2021}{DOI}{https://doi.org/10.1038/d41586-021-01571-1}{The COVID Moonshot is an open science effort to discover a direct-acting SARS-CoV-2 oral antiviral. Here, we share lessons from this effort, including the missed opportunity to develop a phase 2 ready drug more than a decade ago that could have halted the COVID-19 pandemic in its tracks.}
+
+% new
+\newarticle{knowable-covid-moonshot}{Lee A, \jdc, von Delft F}{Why we are developing a patent-free COVID antiviral therapy}{\emph{Knowable Magazine} 09.27.2021}{web}{https://knowablemagazine.org/article/health-disease/2021/why-we-are-developing-patentfree-covid-antiviral-therapy}{In this Opinion, we present the case for a new open science driven model for drug discovery for pandemics.}
+
+{\bf Best practices for computer-aided drug discovery}\\
+
+%new
+\newarticle{affinity-benchmark-best-practices}{Hahn DF, Bayly CI, Boby ML, Bruce Macdonald HE, \jdc, Mey ASJS, Mobley DL, Perez Benito L, Schindler CEM, Tresadern G, Warren GL}{Best practices for constructing, preparing, and evaluating protein-ligand binding affinity benchmarks}{\emph{Living Journal of Computational Molecular Science} 4:1497, 2022}{DOI}{https://doi.org/10.33011/livecoms.4.1.1497}{This living best practices paper for the Living Journal of Computational Molecular Sciences describes the current community consensus in how to curate experimental benchmark data for assessing predictive affinity models for drug discovery, how to prepare these systems for affinity calculations, and how to assess the results to compare performance.}
+
+%new
+\newarticle{alchemical-best-practices}{Mey ASJS$^\ddag$, Allen B, Bruce Macdonald HE, \jdc$^\ddag$, Kuhn M, Michel J, Mobley DL$^\ddag$, Naden LN, Prasad S, Rizzi A, Scheen J, Shirts MR$^\ddag$, Tresadern G, and Xu H}{Best practices for alchemical free energy calculations}{\emph{Living Journal of Computational Molecular Science} 2:18378, 2020}{DOI}{https://doi.org/10.33011/livecoms.2.1.18378}{This living review for the Living Journal of Computational Molecular Sciences (LiveCoMS) covers the essential considerations for running alchemical free energy calculations for rational molecular design for drug discovery.}
+
+\newarticle{alchemical-methods.pdf}{\jdc, Mobley DL, Shirts MR, Dixon RW, Branson KM, and Pande VS}{Free energy methods in drug discovery and design: Progress and challenges}{\emph{Current Opinion in Structural Biology} 21:150, 2011}{DOI}{http://dx.doi.org/10.1016/j.sbi.2011.01.011}{A review of current opportunities and challenges for alchemical free energy calculations in drug discovery and design.}
+
+\newarticle{binding-free-energy.pdf}{Shirts MR, Mobley DL, \jdc}{Alchemical free energy calculations: Ready for prime time?}{\emph{Annual Reports in Computational Chemistry} 3:41, 2007}{DOI}{http://dx.doi.org/10.1016/S1574-1400(07)03004-6}{A review of current alchemical free energy methodologies and their potential for use in drug discovery and ligand design.}
+
+{\bf Coarse-graining for biomolecular dynamics}\\
+
+\newarticle{coarse-graining}{Gkeka P, Stoltz G, Farimani AB, Belkacemi Z, Ceriotti M, \jdc, Dinner AR, Ferguson A, Maillet JB, Minoux H, Peter C, Pietrucci F, Silveira A, Tkatchenko A, Trstanova Z, Wiewiora R, Leliévre T}{Machine learning force fields and coarse-grained variables in molecular dynamics: application to materials and biological systems}{\emph{Journal of Chemical Theory and Computation} 16:4757, 2020}{DOI}{https://doi.org/10.1021/acs.jctc.0c00355}{We review the state of the art in applying machine learning to coarse grain force fields in space and time to study mutliscale dynamics.}
+
+\newarticle{msm-projection.pdf}{\jdc and No\'{e} F}{Markov state models of biomolecular conformational dynamics}{\emph{Current Opinion in Structural Biology} 25:135, 2014}{DOI}{http://dx.doi.org/10.1016/j.sbi.2014.04.002}{A review of exciting recent developments in the stochastic modeling of biomolecular dynamics using techniques I originally co-developed to study protein folding.}
+
+\newarticle{entropy-enthalpy-compensation.pdf}{\jdc and Mobley DL}{Entropy-enthalpy compensation: Role and ramifications for rational ligand design}{\emph{Annual Reviews in Biophysics} 42:121, 2013}{DOI}{http://dx.doi.org/10.1146/annurev-biophys-083012-130318}{Entropy-enthalpy compensation is likely a universal phenomena, but not as severe as widely thought, and irrelevant for drug discovery and ligand design.}
+
+\newarticle{markov-model-generation-3.pdf}{Prinz JH, Wu H, Sarich M, Keller B, Fischbach M, Held M, \jdc, Sch\"{u}tte, and No\'{e} F}{Markov models of molecular kinetics: Generation and validation}{\emph{Journal of Chemical Physics} 134:174105, 2011}{DOI}{http://dx.doi.org/10.1063/1.3565032}{Current best practices for the generation and validation of Markov state models for describing the stochastic dynamics of biomolecular systems.}
+
+\newarticle{social-network.pdf}{\jdc and Pande VS}{The Social Network (of protein conformations)}{\emph{Proceedings of the National Academy of Sciences} 108:12969, 2011}{DOI}{http://dx.doi.org/10.1073/pnas.1109571108}{A new methodology for mapping protein conformational spaces is reminiscent of how we use two-dimensional maps to navigate a three-dimensional world.}
+
+{\bf Protein folding}\\
+
+\newarticle{folding-funnel.pdf}{Dill KA, Ozkan SB, Weikl TR, \jdc, and Voelz VA}{The protein folding problem: When will it be solved?}{\emph{Current Opinion in Structural Biology} 17(3):342, 2007}{DOI}{http://dx.doi.org/10.1016/j.sbi.2007.06.001}{A review of the current state of the protein folding problem.}
+
+\eject
+
+%%%%%%%%%%%%
+
 \section*{Published and In Press}
+
+% updated
+\newarticle{espaloma.jpg}{Wang Y, Fass J, and \jdc}{End-to-end differentiable molecular mechanics force field construction}{\emph{Chemical Science}, in press}{ar$\chi$iv}{https://arxiv.org/abs/2010.01196}{Molecular mechanics force fields have been a workhorse for computational chemistry and drug discovery. Here, we propose a new approach to force field parameterization in which graph convolutional networks are used to perceive chemical environments and assign molecular mechanics (MM) force field parameters. The entire process of chemical perception and parameter assignment is differentiable end-to-end with respect to model parameters, allowing new force fields to be easily constructed from MM or QM force fields, extended, and applied to arbitrary biomolecules.}
+
+% new
+\newarticle{openff-evaluator}{Boothroyd S, Wang L-P, Mobley DL, \jdc, and Shirts MR}{The Open Force Field Evaluator: An automated, efficient, and scalable framework for the estimation of physical properties from molecular simulation}{\emph{Journal of Chemical Theory and Computation} 18:3566, 2022}{DOI}{https://doi.org/10.1021/acs.jctc.1c01111}{We describe a new software framework for automated evaluation of physical properties for the benchmarking and optimization of small molecule force fields according to best practices.}
+
+% new
+\newarticle{openff-evaluator}{Boothroyd S, Madin OC, Mobley DL, Wang L-P, \jdc, and Shirts MR}{Improving force field accuracy by training against condensed-phase mixture properties}{\emph{Journal of Chemical Theory and Computation} 18:3577, 2022}{DOI}{https://doi.org/10.1021/acs.jctc.1c01268}{We use a new automated framework for physical property evaluation and fitting to show how molecular mechanics force fields can be systematically improved by fitting to condensed phase properties.}
 
 % new
 \newarticle{cache}{Ackloo S, Al-awar R, Amaro RE, Arrowsmith CH, Azevedo H, Batey RA, Bengio Y, Betz UAK, Bologa CG, \jdc, Cornell WD, Dunham I, Ecker GF, Edfeldt K, Edwards AM, Gilsom MK, Gordijo CR, Hessler G, Hillisch A, Hogner A, Irwin JJ, Jansen JM, Kuhn D, Leach AR, Lee AA, Lessel U, Moult J, Muegge I, Oprea TI, Perry BG, Riley, Singh Saikantendu K, Santhakumar V, Schapira M, Scholten C, Todd MH, Vedadi M, Volkamer A, and Wilson TM}{CACHE (Critical Assessment of Computational Hit-finding Experiments): A public-private partnership benchmarking initiative to enable the development of computational methods for hit-finding}{\emph{Nature Reviews Chemistry}, 6:287, 2022}{DOI}{https://doi.org/10.1038/s41570-022-00363-z}{We describe CACHE: A new public-private partnership that aims to transform computer-aided drug discovery much the way that CASP transformed protein structure prediction into a reproducible, accurate engineering discipline.}
 
 %new
-\newarticle{sampl7-phip2}{Grosjean H, Isik M, Aimon A, Mobley D, \jdc, von Delft F, and Biggin PC}{SAMPL7 protein-ligand challenge: A community-wide evaluation of computational methods against fragment screening and pose-prediction}{\emph{Journal of Computer-Aided Molecular Design}, in press}{DOI}{https://doi.org/10.1007/s10822-022-00452-7}{We field a blind community challenge to assess how well state of the art computational chemistry methods can predict the binding modes of small druglike fragments to a protein target for which no chemical matter is known, PHIP2, using fragment screening at the Diamond Light Source.}
+\newarticle{sampl7-phip2}{Grosjean H, Isik M, Aimon A, Mobley D, \jdc, von Delft F, and Biggin PC}{SAMPL7 protein-ligand challenge: A community-wide evaluation of computational methods against fragment screening and pose-prediction}{\emph{Journal of Computer-Aided Molecular Design} 36:291, 2022}{DOI}{https://doi.org/10.1007/s10822-022-00452-7}{We field a blind community challenge to assess how well state of the art computational chemistry methods can predict the binding modes of small druglike fragments to a protein target for which no chemical matter is known, PHIP2, using fragment screening at the Diamond Light Source.}
 
 %new
-\newarticle{ink4-cdk4}{Li Q, Jiang B, Guo J, Shao H, Del Priore IS, Chang Q, Kudo R, Li Z, Razavi P, Liu B, Boghossian AS, Rees MG, Ronan MM, Roth JA, Donovan KA, Palafox M, Reis-Filho JS, de Stanchina E, Fischer ES, Rosen N, Serra V, Koff A, \jdc, Gray NS, and Chandardlapaty S}{INK4 tumor suppressor proteins mediate resistance to CDK4/6 kinase inhibitors}{\emph{Cancer Discovery}, in press}{DOI}{http://dx.doi.org/10.1158/2159-8290.CD-20-1726}{We demonstrate CDK6 causes drug resistance by binding INK4 proteins, and develop bifunctional degraders conjugating palbociclib with E3 ligands to overcome this mechanism of resistance.}
+\newarticle{ink4-cdk4}{Li Q, Jiang B, Guo J, Shao H, Del Priore IS, Chang Q, Kudo R, Li Z, Razavi P, Liu B, Boghossian AS, Rees MG, Ronan MM, Roth JA, Donovan KA, Palafox M, Reis-Filho JS, de Stanchina E, Fischer ES, Rosen N, Serra V, Koff A, \jdc, Gray NS, and Chandardlapaty S}{INK4 tumor suppressor proteins mediate resistance to CDK4/6 kinase inhibitors}{\emph{Cancer Discovery} 12:356, 2022}{DOI}{http://dx.doi.org/10.1158/2159-8290.CD-20-1726}{We demonstrate CDK6 causes drug resistance by binding INK4 proteins, and develop bifunctional degraders conjugating palbociclib with E3 ligands to overcome this mechanism of resistance.}
 
 % new
-\newarticle{gcn2-activation}{Mellinghoff I, Tang CP, Clark O, Ferrarone J, Campos C, Lalani AS, \jdc, Intlekofer AM, and Elemento O}{GCN2 kinase Activation by ATP-competitive Kinase Inhibitors}{\emph{Nature Chemical Biology}, 18:207, 2022}{DOI}{https://doi.org/10.1038/s41589-021-00947-8}{We describe paradoxical activation of GCN2 kinase activity by the kinase inhibitor neratinib, and propose a model for how inhibitor-induced dimerization might cause this unusual activity.}
+\newarticle{gcn2-activation}{Mellinghoff I, Tang CP, Clark O, Ferrarone J, Campos C, Lalani AS, \jdc, Intlekofer AM, and Elemento O}{GCN2 kinase activation by ATP-competitive kinase inhibitors}{\emph{Nature Chemical Biology}, 18:207, 2022}{DOI}{https://doi.org/10.1038/s41589-021-00947-8}{We describe paradoxical activation of GCN2 kinase activity by the kinase inhibitor neratinib, and propose a model for how inhibitor-induced dimerization might cause this unusual activity.}
 
 % new
 \newarticle{2CLJQ}{Madin OC, Boothroyd S, Messerly RA, \jdc, Fass J, Shirts MR}{Bayesian inference-driven model parameterization and model selection for 2CLJQ fluid models}{\emph{Journal of Chemical Informatics and Modeling}, 62:874, 2022}{DOI}{https://doi.org/10.1021/acs.jcim.1c00829}{Here, we show how Bayesian inference can be used to automatically perform model selection and fit parameters for a molecular mechanics force field.}
 
 % new
-\newarticle{parsley}{Qiu Y, Smith DGA, Boothroyd B, Jang H, Wagner J, Bannan C, Gokey T, Lim VT, Stern CD, Rizzi A, Lucas X, Tjanaka B, Shirts MR$^\ddag$, Gilson MK$^\ddag$, \jdc$^\ddag$, Bayly CI$^\ddag$, Mobley DL$^\ddag$, Wang L-P$^\ddag$}{Development and benchmarking of Open Force Field v1.0.0, the Parsley small molecule force field}{\emph{Journal of Chemical Theory and Computation}, 17:6262, 2021}{chemRxiv}{https://chemrxiv.org/articles/preprint/Development_and_Benchmarking_of_Open_Force_Field_v1_0_0_the_Parsley_Small_Molecule_Force_Field/13082561/1}{We present a new, modern small molecule force field for molecular design from the Open Force Field Initiative, a large industry-academic collaboration that focuses on open science, open data, and modern open source infrastructure.}
+\newarticle{parsley}{Qiu Y, Smith DGA, Boothroyd B, Jang H, Wagner J, Bannan C, Gokey T, Lim VT, Stern CD, Rizzi A, Lucas X, Tjanaka B, Shirts MR$^\ddag$, Gilson MK$^\ddag$, \jdc$^\ddag$, Bayly CI$^\ddag$, Mobley DL$^\ddag$, Wang L-P$^\ddag$}{Development and benchmarking of Open Force Field v1.0.0, the Parsley small molecule force field}{\emph{Journal of Chemical Theory and Computation}, 17:6262, 2021}{DOI}{https://doi.org/10.1021/acs.jctc.1c00571}{We present a new, modern small molecule force field for molecular design from the Open Force Field Initiative, a large industry-academic collaboration that focuses on open science, open data, and modern open source infrastructure.}
 
 % new
 \newarticle{abl-mutant-kinetics}{Lyczek A, Tilman-Berger B, Rangwala AM, Paung Y, Tom J, Philipose H, Guo J, Albanese SK, Robers MB, Knapp S, \jdc, Seeliger MA}{Mutation in Abl kinase with altered drug binding kinetics indicates a novel mechanism of imatinib resistance}{\emph{Proceedings of the National Academy of Sciences} 118:e2111451118}{DOI}{https://doi.org/10.1073/pnas.2111451118, 2021}{Here, we characterize the biophysical mechanisms underlying mutants of Abl kinase associated with clinical drug resistance to targeted cancer therapies. We uncover a surprising novel mechanism of mutational resistance to kinase inhibitor therapy in which the off-rate for inhibitor unbinding is increased without affecting inhibitor affinity.}
 
 % new
-\newarticle{knowable-covid-moonshot}{Lee A, \jdc, von Delft F}{Why we are developing a patent-free COVID antiviral therapy}{\emph{Knowable Magazine} 09.27.2021}{web}{https://knowablemagazine.org/article/health-disease/2021/why-we-are-developing-patentfree-covid-antiviral-therapy}{In this Opinion, we present the case for a new open science driven model for drug discovery for pandemics.}
-
-% new
-\newarticle{qcarchive}{Smith DGA, Lolinco AT, Glick ZL, Lee J, Alenaizan A, Barnes TA, Borca CH, Di Remigio R, Dotson DL, Ehlert S, Heide AG, Herbst MF, Hermann J, Hicks CB, Horton JT, Hurtado AG, Kraus P, Kruse P, Lee SJR, Misiewicz JP, Naden LN, Ramezanghorbani F, Scheurer M, Shriber JB, Simmonett AC, Steinmetzer J, Wagner JR, Ward L, Welborn M, Altarawy D, Anwar J, \jdc, Dreuw A, Kulik HJ, Liu F, Martinez TJ, Matthews DA, Schaefer III HF, Sponer J, Turney JM, Wang L-P, De Silva N, King RA, Stanton JF, Gordon MS, Windus TL, Sherrill CD, Burns LA}{Quantum chemistry common driver and databases (QCDB) and quantum chemistry engine (QCEngine): Automation and interoperability among computational chemistry programs}{\emph{Journal of Chemical Physics}, in press}{DOI}{https://doi.org/10.1063/5.0059356}{We describe a new community-wide approach to interoperability for quantum chemistry packages that will enable large-scale applications such as next-generation machine learning for chemistry and automated force field construction for drug discovery.}
+\newarticle{qcarchive}{Smith DGA, Lolinco AT, Glick ZL, Lee J, Alenaizan A, Barnes TA, Borca CH, Di Remigio R, Dotson DL, Ehlert S, Heide AG, Herbst MF, Hermann J, Hicks CB, Horton JT, Hurtado AG, Kraus P, Kruse P, Lee SJR, Misiewicz JP, Naden LN, Ramezanghorbani F, Scheurer M, Shriber JB, Simmonett AC, Steinmetzer J, Wagner JR, Ward L, Welborn M, Altarawy D, Anwar J, \jdc, Dreuw A, Kulik HJ, Liu F, Martinez TJ, Matthews DA, Schaefer III HF, Sponer J, Turney JM, Wang L-P, De Silva N, King RA, Stanton JF, Gordon MS, Windus TL, Sherrill CD, Burns LA}{Quantum chemistry common driver and databases (QCDB) and quantum chemistry engine (QCEngine): Automation and interoperability among computational chemistry programs}{\emph{Journal of Chemical Physics} 155:204801, 2021}{DOI}{https://doi.org/10.1063/5.0059356}{We describe a new community-wide approach to interoperability for quantum chemistry packages that will enable large-scale applications such as next-generation machine learning for chemistry and automated force field construction for drug discovery.}
 
 \newarticle{vir-antibodies-escape}{Starr TN, Czudnochowski N, Zatta F, Park YJ, Liu Z, Addetia A, Pinto D, Beltramello M, Hernandez P, Greaney AJ, Marzi R, Glass WG, Zhang I, Dingens AS, Bowen JE, Wojcechowskyj JA, De Marco A, Rosen LE, Zhou J, Montiel-Ruiz M, Kaiser H, Tucker H, Housley MP, di Iulio J, Lombardo G, Agostini M, Sprugasci N, Culap K, Jaconi S, Meury M, Dellota E, Cameroni E, Croll TI, Nix JC, Havenar-Daughton C, Telenti A, Lempp FA, Pizzuto MS, \jdc, Hebner CM, Whelan SPJ, Virgin HW, Veesler D, Corti D, Bloom JD, Snell G}{SARS-CoV-2 RBD antibodies that maximize breadth and resistance to escape}{\emph{Nature} 597:97, 2021}{DOI}{https://doi.org/10.1038/s41586-021-03807-6}{We comprehensively characterize escape, breadth, and potency across a panel of SARS-CoV-2 antibodies targeting the receptor binding domain, including the parent antibody of the recently approved Vir antibody drug (Sotrovimab), illuminating escape mutations with structural and dynamic insight into their mechanism of action.}
 
 \newarticle{neutromeratio-vacuum}{Wieder M, Fass J, and \jdc}{Fitting quantum machine learning potentials to experimental free energy data: Predicting tautomer ratios in solution}{\emph{Chemical Science} 12:11364, 2021}{DOI}{http://doi.org/10.1039/D1SC01185E}{We demonstrate, for the first time, how alchemical free energy calculations can performed on systems simulated entirely with quantum machine learning potentials and how these potentials can be retrained on experimental free energies to generalize to new molecules from limited training data. We apply this approach to a difficult problem in small molecule drug discovery: Predicting accurate tautomer ratios in solution.}
-
-\newarticle{covid-moonshot-nature-commentary}{von Delft F, Calmiano M, \jdc, Griffen E, Lee A, London N, Matviuk T, Perry B, Robinson M, and von Delft A}{A white-knuckle ride of open COVID drug discovery}{\emph{Nature} 594:330, 2021}{DOI}{https://doi.org/10.1038/d41586-021-01571-1}{The COVID Moonshot is an open science effort to discover a direct-acting SARS-CoV-2 oral antiviral. Here, we share lessons from this effort, including the missed opportunity to develop a phase 2 ready drug more than a decade ago that could have halted the COVID-19 pandemic in its tracks.}
 
 \newarticle{foldingathome-covid-cryptic-pockets}{Zimmerman MI, Porter JR, Ward MD, Singh S, Vithani N, Meller A, Mallimadugula UL, Kuhn CE, Borowsky JH, Wiewiora RP, Hurley, MFD, Harbison AM, Fogarty CA, Coffland JE, Fadda E, Voelz VA, \jdc, Bowman GR}{SARS-CoV-2 simulations go exascale to predict dramatic spike opening and cryptic pockets across the proteome}{\emph{Nature Chemistry} 13:651, 2021}{DOI}{https://doi.org/10.1038/s41557-021-00707-0}{To accelerate a multitude of drug development activities to combat the global threat posed by COVID-19, over a million citizen scientists have banded together through the Folding@home distributed computing project to create the world’s first Exascale computer and simulate protein dynamics. An unprecedented 0.1 seconds of simulation of the viral proteome reveal how the spike complex uses conformational masking to evade an immune response, conformational changes implicated in the function of other viral proteins, and cryptic pockets that are absent in experimental structures. These structures and mechanistic insights present new targets for the design of therapeutics.}
 
@@ -468,7 +624,7 @@ $\ddag$ denotes co-corresponding authors}
 
 \newarticle{sampl6-pka-measurements}{Isik M, Levorse D, Rustenburg AS, Ndukwe IE, Wang H, Reibarkh M, Martin GE, Makarov AA, Mobley DL, Rhodes T$\ddag$, and \jdc$\ddag$}{pKa measurements for the SAMPL6 prediction challenge for a set of kinase inhibitor-like fragments}{\emph{Journal of Computer Aided Molecular Design} 32:1117, 2018}{DOI}{http://doi.org/10.1007/s10822-018-0168-0}{The SAMPL5 blind challenge exercises identified neglect of protonation state effects as a major accuracy-limiting factor in physical modeling of biomolecular interactions. In this study, we report the experimental measurements behind a SAMPL6 blind challenges in which we assess the ability of community codes to predict small molecule pKas for small molecule resembling fragments of selective kinase inhibitors.}
 
-\newarticle{kinome-expression-tree}{Albanese SK*, Parton DL*, Isik M$\dag$, Rodr\'{i}guez-Laureano L$\dag$, Hanson SM, Gradia S, Jeans C, Levinson NM, Seeliger M, and \jdc}{An open library of human kinase domain constructs for automated bacterial expression}{\emph{Biochemistry} 57:4675, 2018}{DOI}{http://doi.org/10.1021/acs.biochem.7b01081}{To establish a tractable experimental system for studying the biophysical determinants of selective kinase inhibitor resistance in clinical cancer mutations, we engineer a library of human kinase domains with useful bacterial expression with phosphatase coexpression.}
+\newarticle{kinome-expression-tree}{Albanese SK*, Parton DL*, Isik M$\dag$, Rodr\'{i}guez-Laureano L$\dag$, Hanson SM, Gradia S, Jeans C, Levinson NM, Seeliger M, and \jdc}{An open library of human kinase domain constructs for automated bacterial expression}{\emph{Biochemistry} 57:4675, 2018}{DOI}{http://doi.org/10.1021/acs.biochem.7b01081}{To establish a tractable experimental system for studying the biophysical determinants of selective kinase inhibitor resistance in clinical cancer mutations, we engineer a library of human kinase domains with useful bacterial expression with phosphatase coexpression. Over 350 requests have been made for these plasmids.}
 
 \newarticle{bayesian-itc}{Nguyen TH, Rustenburg AS, Krimmer SG, Zhang H, Clark JD, Novick PA, Branson K, Pande VS, \jdc$\ddag$, MinH DDL$\ddag$}{Bayesian analysis of isothermal titration calorimetry for binding thermodynamics}{\emph{PLOS ONE} 3(9): e0203224, 2018}{DOI}{http://dx.doi.org/10.1371/journal.pone.0203224}{We show how Bayesian inference can produce greatly improved estimates of statistical uncertainty from isothermal titration calorimetry (ITC) experiments, allowing the joint distribution of thermodynamic parameter uncertainties to be inferred.}
 
@@ -580,45 +736,9 @@ $\ddag$ denotes co-corresponding authors}
 
 %\eject
 
-%%%%%%%%%%%%
-
-\section*{Reviews and Commentaries}
-
-\newarticle{coarse-graining}{Gkeka P, Stoltz G, Farimani AB, Belkacemi Z, Ceriotti M, \jdc, Dinner AR, Ferguson A, Maillet JB, Minoux H, Peter C, Pietrucci F, Silveira A, Tkatchenko A, Trstanova Z, Wiewiora R, Leliévre T}{Machine learning force fields and coarse-grained variables in molecular dynamics: application to materials and biological systems}{\emph{Journal of Chemical Theory and Computation}}{DOI}{https://doi.org/10.1021/acs.jctc.0c00355}{We review the state of the art in applying machine learning to coarse grain force fields in space and time to study mutliscale dynamics.}
-
-\newarticle{msm-projection.pdf}{\jdc and No\'{e} F}{Markov state models of biomolecular conformational dynamics}{\emph{Current Opinion in Structural Biology} 25:135, 2014}{DOI}{http://dx.doi.org/10.1016/j.sbi.2014.04.002}{A review of exciting recent developments in the stochastic modeling of biomolecular dynamics using techniques I originally co-developed to study protein folding.}
-
-\newarticle{entropy-enthalpy-compensation.pdf}{\jdc and Mobley DL}{Entropy-enthalpy compensation: Role and ramifications for rational ligand design}{\emph{Annual Reviews in Biophysics} 42:121, 2013}{DOI}{http://dx.doi.org/10.1146/annurev-biophys-083012-130318}{Entropy-enthalpy compensation is likely a universal phenomena, but not as severe as widely thought, and irrelevant for drug discovery and ligand design.}
-
-\newarticle{alchemical-methods.pdf}{\jdc, Mobley DL, Shirts MR, Dixon RW, Branson KM, and Pande VS}{Free energy methods in drug discovery and design: Progress and challenges}{\emph{Current Opinion in Structural Biology} 21:150, 2011}{DOI}{http://dx.doi.org/10.1016/j.sbi.2011.01.011}{A review of current opportunities and challenges for alchemical free energy calculations in drug discovery and design.}
-
-\newarticle{markov-model-generation-3.pdf}{Prinz JH, Wu H, Sarich M, Keller B, Fischbach M, Held M, \jdc, Sch\"{u}tte, and No\'{e} F}{Markov models of molecular kinetics: Generation and validation}{\emph{Journal of Chemical Physics} 134:174105, 2011}{DOI}{http://dx.doi.org/10.1063/1.3565032}{Current best practices for the generation and validation of Markov state models for describing the stochastic dynamics of biomolecular systems.}
-
-\newarticle{social-network.pdf}{\jdc and Pande VS}{The Social Network (of protein conformations)}{\emph{Proceedings of the National Academy of Sciences} 108:12969, 2011}{DOI}{http://dx.doi.org/10.1073/pnas.1109571108}{A new methodology for mapping protein conformational spaces is reminiscent of how we use two-dimensional maps to navigate a three-dimensional world.}
-
-\newarticle{binding-free-energy.pdf}{Shirts MR, Mobley DL, \jdc}{Alchemical free energy calculations: Ready for prime time?}{\emph{Annual Reports in Computational Chemistry} 3:41, 2007}{DOI}{http://dx.doi.org/10.1016/S1574-1400(07)03004-6}{A review of current alchemical free energy methodologies and their potential for use in drug discovery and ligand design.}
-
-\newarticle{folding-funnel.pdf}{Dill KA, Ozkan SB, Weikl TR, \jdc, and Voelz VA}{The protein folding problem: When will it be solved?}{\emph{Current Opinion in Structural Biology} 17(3):342, 2007}{DOI}{http://dx.doi.org/10.1016/j.sbi.2007.06.001}{A review of the current state of the protein folding problem.}
-
-\eject
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % OTHER ACTIVITIES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%
-
-\section*{Scientific Advisory Boards}
-
-\noindent\years{\scshape 2013--2018}Schr\"{o}dinger, LLC
-
-\noindent\years{\scshape 2018--}OpenEye Scientific
-
-\noindent\years{\scshape 2020--}Redesign Science
-
-\noindent\years{\scshape 2021--}Interline Therapeutics
-
-\noindent\years{\scshape 2021--}Ventus Therapeutics (Scientific Advisor)
 
 \section*{Peer reviewer for scientific journals}
 
@@ -662,17 +782,18 @@ Structure
 
 %\eject
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ACADEMIC SERVICE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section*{Service}
+%\section*{Service}
 
 %\talk{2012}{MSKCC}Established High Performance GPU Research Computing Resource \\ \vspace{0.5ex}
 
-\talk{2018--}{~}Open Force Field Consortium Governing Board \\ {\small \url{http://openforcefield.org/consortium}}\vspace{0.5ex}
+%\talk{2018--}{~}Open Force Field Consortium Governing Board \\ {\small \url{http://openforcefield.org/consortium}}\vspace{0.5ex}
 
-\talk{2012--2015}{~}MSKCC High Performance Computing Steering Committee \\ {\small Member, Co-founder}
+%\talk{2012--2015}{~}MSKCC High Performance Computing Steering Committee \\ {\small Member, Co-founder}
 
 
 %\vspace{1.5ex}
@@ -736,6 +857,8 @@ Ad hoc reviewer and virtual panel member for Chemical Theory, Models, and Comput
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Conferences organized}
+
+\talk{2020--}{\,}Pause due to COVID-19 pandemic \vspace{0.5ex}
 
 \talk{Sep 2019}{London, UK}CompBioMed 2019\\ {\small IET London}\vspace{0.5ex}
 
@@ -1179,7 +1302,7 @@ The goal of this project is to probe the role of protein reorganization energy i
 Vir Biosciences Sponsored Research Agreement SK2019-0582 \\
 {\bf Development of alchemical free energy methods for predicting the impact of point mutations}\\
 The goal of this project is to develop alchemical free energy methods for predicting the impact of point mutations on antibody:antigen affinities.\\
-8/1/2019 -- 7/31/2022\\
+8/1/2019 -- 7/31/2023\\
 \$55,556 annual direct costs to the Chodera lab
 
 \vspace{1.5ex}
@@ -1189,14 +1312,6 @@ Relay Therapeutics Collaboration SK2018-0162\\
 The goal of this project is to develop open source scalable cloud workflows for lead optimization using relative alchemical free energy calculations, as well as Bayesian integrative modeling techniques for experimental biophysical data and molecular simulations. \\
 4/5/2018 -- 4/4/2023 \\
 \$124,828 annual direct costs to the Chodera lab
-
-\vspace{1.5ex}
-
-Bayer Sponsored Research Agreement SK2019-1289 \\
-{\bf Development of a combined machine learning / alchemical free energy approach to predict the impact of mutations on small molecule kinase inhibitor binding} \\
-The goal of this project is to develop open source scalable free energy and machine learning workflows in collaboration with the Volkamer lab (Charit\'{e} Berlin) to predict kinase mutations small molecule therapeutics may be effective against. \\
-3/1/2020 -- 4/30/2022 \\
-\$117,105 annual direct costs to the Chodera lab
 
 \vspace{1.5ex}
 
@@ -1215,13 +1330,18 @@ The goal of this project is to identify key biophysical interactions necessary f
 NIH NIAID U19 1U19AI171399-01 (MPI: Chodera [Contact PI]; Alpha Lee, Potera; Ben Perry, DNDi) \\
 {\bf AI-driven Structure-enabled Antiviral Platform (ASAP)}
 co-Is: Karla Kirkegaard (Stanford), Matt Bogyo (Stanford), Jesse Bloom (Fred Hutch), Frank von Delft (Diamond Light Source), Martin Walsh (Diamond Light Source), Alpha Lee (PostEra), Nir London (Weizmann), Ed Griffen (MedChemica), Laurent Fraisse (DNDi), Haim Barr (Weizmann), Daren Fearon (Diamond Light Source), Kris White (Mount Sinai), Adolfo Garc\'{i}a-Sastre (Mount Sinai), Randy Albrecht (Mount Sinai) \\
-05/01/2022 -- 04/30/2027\\
+05/16/2022 -- 04/30/2025\\
 \emph{The goal of this antiviral drug discovery (AViDD) Center is to use an AI-accelerated structure-enabled discovery platform to build a pipeline of novel oral antivirals against coronaviruses, flaviviruses, and picornaviruses using an open science, IP-free discovery paradigm to act as a nexus for global antiviral discovery.}\\
-Total federal funds requested: \$113,076,459\\
-Total direct costs: \$86,402,219\\
-Total direct costs less consortium F\&A: \$75,000,000\\
-Total F\&A for MSKCC: \$24,415,485 \\
-Note: Notice of Award has not yet arrived but we are told by NIAID to expect it prior to press release on 18 May 2022.
+Total federal funds awarded: \$67,662,387\\
+Total direct costs: \$49,000,085\\
+Total direct costs less consortium/subaward costs: \$23,689,478\\
+Total F\&A for MSKCC: \$18,662,302
+Eligible for non-competing renewal for two more years for an additional \$42M.
+%Total federal funds requested: \$113,076,459\\
+%Total direct costs: \$86,402,219\\
+%Total direct costs less consortium F\&A: \$75,000,000\\
+%Total F\&A for MSKCC: \$24,415,485 \\
+%Note: Notice of Award has not yet arrived but we are told by NIAID to expect it prior to press release on 18 May 2022.
 
 \vspace{1.5ex}
 
@@ -1265,10 +1385,12 @@ The goal of this project is to support continued development of OpenMM, transiti
 
 \vspace{1.5ex}
 
+% Fix : Split into two awards
 BIH Einstein Visiting Professorship at the Charit\'{e} Berlin\\
 {\bf Computational polypharmacology: A new paradigm for selectively promiscuous kinase inhibitors}\\
 The goal of this project is to develop structure-informed machine learning approaches to predicting kinase inhibitor polypharmacology for computer-guided small molecule design.\\
-1/1/2019 -- 6/30/2022\\
+%1/1/2019 -- 6/30/2022\\
+1/1/2019 -- 12/31/2024\\
 EUR150,000 annual direct costs to Chodera (via Charit\'{e}) for Berlin working group (with six-month no-cost extension)
 
 %\vspace{1.5ex}
@@ -1513,6 +1635,14 @@ None
 
 \subsubsection*{Single-Investigator Grants and Contracts}
 
+Bayer Sponsored Research Agreement SK2019-1289 \\
+{\bf Development of a combined machine learning / alchemical free energy approach to predict the impact of mutations on small molecule kinase inhibitor binding} \\
+The goal of this project is to develop open source scalable free energy and machine learning workflows in collaboration with the Volkamer lab (Charit\'{e} Berlin) to predict kinase mutations small molecule therapeutics may be effective against. \\
+3/1/2020 -- 4/30/2022 \\
+\$117,105 annual direct costs to the Chodera lab
+
+\vspace{1.5ex}
+
 NSF RAPID CHE2033426\\
 {\bf RAPID: Identifying Biophysical Determinants of Binding to the SARS-CoV-2 Main Viral Protease}\\
 The goal of this proposal is to assess the accuracy of large-scale alchemical free energy calculations in identifying potent inhibitors of the SARS-CoV-2 main viral protease (Mpro) with the COVID Moonshot. \\
@@ -1754,10 +1884,8 @@ The goal of this project is to use computational techniques that explicitly inco
 \subsubsection*{Postdocs}
 
 \begin{itemize}
-  \item David Schaller, PhD Freie Unviersitat Berlin (7/1/2020--) {\bf (Berlin group)}\\
-  \emph{Scalable alchemical free energy calculations for drug discovery}
-
   \item Sukrit Singh, PhD Washington University St.\ Louis (6/1/2021--) \\
+  Damon Runyon Quantitative Biology Fellow\\
   \emph{Selective inhibition and drug resistance in clinical kinase inhibitors}
 
 \end{itemize}
@@ -1767,44 +1895,59 @@ The goal of this project is to use computational techniques that explicitly inco
 \begin{itemize}
   \item Ivy Zhang (8/1/2018--)\\
   Program in Physiology, Biophysics, and Systems Biology (PBSB)\\
-  \emph{Scalable free energy calculations for predicting the impact of clinical mutations in antibodies and kinases}
+  \emph{Scalable free energy calculations for predicting the impact of mutations on protein-protein interactions}
   
   \item Yuanqing Wang (7/1/2018--)\\
   Program in Physiology, Biophysics, and Systems Biology (PBSB)\\
-  \emph{Machine learning of physical models for drug discovery}
+  \emph{Machine learning of physics for drug discovery}
   
   \item Dominic Rufa (4/1/2019--)\\
   Tri-Institutional Program in Computational Biology and Medicine (CBM)\\
-  \emph{Small molecule multi-objective design by free energy methods}
+  \emph{Machine learning for alchemical free energy calculations}
 
-  \item Talia Kimber (4/1/2019--) {(\bf Berlin group)}\\
+  \item Talia Kimber (4/1/2019--) [co-supervised with Andrea Volkamer, Charit\'e Berlin] \\
   Charit\'e Universit\"{a}tmedizin (supervisor: Andrea Volkamer)\\
   Freie Universit\"{a}t Berlin, Computer Science PhD program (supervisor: Frank No\'{e})\\
   \emph{Machine learning for optimizing affinity/selectivity and predicting resistance}
   
   % check this
-  \item Alexander Payne (8/1/2020--)\\
+  \item Alexander Payne (8/1/2020--) [co-supervised with Rich Hite, MSKCC Structural Biology Program] \\
   Program in Physiology, Biophysics, and Systems Biology (PBSB)\\
   \emph{Combining cryo-EM with Markov state models, virtual screening, and free energy calculations for drug discovery}
   
   % check this
-  \item Viktor Belay (8/1/2020--)\\
+  \item Viktor Belay (8/1/2020--) [co-supervised with Rich Hite, MSKCC Structural Biology Program] \\
   Program in Physiology, Biophysics, and Systems Biology (PBSB)\\
   \emph{Combining cryo-EM with Markov state models, virtual screening, and free energy calculations for drug discovery}
 
   % check this
-  \item Michael Retchin (7/1/2021--)\\
-  Tri-Institutional Program in Computational Biology and Medicine (CB<)\\
-  \emph{Machine learning prediction of MHC:TCR interactions; autonomous drug discovery}
+  \item Michael Retchin (7/1/2021--) \\
+  Tri-Institutional Program in Computational Biology and Medicine (CBM)\\
+  \emph{New technologies for autonomous drug discovery}
+
+  % check this
+  \item Benjamin Kaminow (1/1/2022--)\\
+  Tri-Institutional Program in Computational Biology and Medicine (CBM)\\
+  \emph{Structure-enabled machine learning for drug discovery}
 
 \end{itemize}
 
+\subsubsection*{Software Scientists}
 
-\subsubsection*{Technicians}
+\begin{itemize}
+  % Check start date
+  \item Iv\'{a}n Pulido (7/1/2021--)\\
+  \emph{Alchemical free energy calculation software infrastructure; software infrastructure support for ASAP}
+
+\end{itemize}
+
+% TODO: Add contractors?
+
+\subsubsection*{Research Associates}
 
 \begin{itemize}
   \item Erica Goldberger (7/1/2019--)\\
-  \emph{Automated measurements of small molecule binding affinities to model drug targets for improving quantitative predictions for drug discovery}
+  \emph{Lab manager; Automated measurements of small molecule binding affinities to model drug targets for improving quantitative predictions for drug discovery}
 
 \end{itemize}
 
@@ -1812,65 +1955,79 @@ The goal of this project is to use computational techniques that explicitly inco
 
 \subsection*{Past trainees}
 
+My lab trains interdisciplinary scientists to tackle the most challenging problems in drug discovery.
+
 \subsubsection*{Postdocs}
 
 \begin{itemize}
+
+  % check departure date
+  \item David Schaller, PhD Freie Unviersitat Berlin (7/1/2020--7/31/2022) {\bf (Berlin group)}\\
+  %\emph{Scalable alchemical free energy calculations for drug discovery}
+  Current position: \emph{Associate Scientist}, \href{https://www.nuvisan.com/}{Nuvisan}
+
   \item Ana Silveira, PhD Federal University of Rio de Janeiro (8/1/2018--7/31/2019)\\
   %\emph{Integrative modeling of allosteric inhibition; modeling antimicrobial permeation of bacterial porins}
-  Current position: \emph{Investigator}, \href{https://silicontx.com/}{Silicon Therapeutics}
+  %Current position: \emph{Investigator}, \href{https://silicontx.com/}{Silicon Therapeutics}
+  Current position: \emph{Senior Investigator}, \href{https://www.roivant.com/}{Roivant Sciences}  
 
   \item Jiaye Guo, PhD Stony Brook University (10/1/2018--5/31/2021)\\
   %\emph{Design of selective kinase inhibitors and emergence of resistance}
-  Current position: \emph{Senior Scientist}, \href{http://schrodinger.com}{Schrodinger}
+  Current position: \emph{Senior Scientist I}, \href{http://schrodinger.com}{Schrodinger}
   
   \item Simon Boothroyd, PhD Lancaster University (11/1/2018--10/31/2019)\\
   %\emph{Development of advanced biomolecular force fields for drug discovery}
   %Next position: \emph{XtalPi Open Force Field Distinguished Postdoctoral Fellow} with \href{https://www.colorado.edu/lab/shirtsgroup/}{{\bf Michael Shirts}} at the University of Colorado, Boulder
-  Current position: \emph{Science Lead}, \href{http://openforcefield.org}{Open Force Field Initiative}
+  %Current position: \emph{Science Lead}, \href{http://openforcefield.org}{Open Force Field Initiative}
+  Current position: \emph{Senior Researcher, Scientific Programmer}, \href{https://www.roivant.com/}{Roivant Sciences}
+  
+  \item William Glass, PhD Southampton (5/1/2020--7/31/2021) \\
+  %\emph{Scalable alchemical free energy calculations for predicting the impact of resistance mutations in kinase inhibition}
+  Current position: \emph{Molecular Dynamics Research Scientist}, \href{https://www.exscientia.ai/}{Exscientia}
 
-  \item William Glass, PhD Southampton (5/1/2020--) \\
-  \emph{Scalable alchemical free energy calculations for predicting the impact of resistance mutations in kinase inhibition}
-
-  \item Jaime Rodr\'{i}guez-Guerra, PhD Autonomous University of Barcelona (4/1/2019--) {\bf (Berlin group)}\\
-  \emph{Scalable machine learning and alchemical free energy calculations for drug discovery}
+  \item Jaime Rodr\'{i}guez-Guerra Pedregal, PhD Autonomous University of Barcelona (4/1/2019--5/31/2021) {\bf (Berlin group)}\\
+  %\emph{Scalable machine learning and alchemical free energy calculations for drug discovery}
+  Current position: \emph{Software Engineer}, \href{https://quansight.com/}{Quansight}
 
   \item Karmen \v{C}ondi\'{c}-Jurki\'{c}, PhD Friedrich Alexander University, Erlangen (4/6/2019--)\\
   %\emph{Biomolecular force fields; open science; interoperability in molecular simulations}
-  Current position: \emph{Project Manager}, \href{http://openforcefield.org}{Open Force Field Initiative}; \emph{Board of Directors}, \href{http://omsf.io}{Open Molecular Software Foundation}
+  %Current position: \emph{Project Manager}, \href{http://openforcefield.org}{Open Force Field Initiative}; \emph{Board of Directors}, \href{http://omsf.io}{Open Molecular Software Foundation}
+  Current position: \emph{Executive Director and Co-Founder}, \href{http://omsf.io}{Open Molecular Software Foundation}
 
   \item Hannah Bruce Macdonald, PhD University of Southampton (10/1/2018--9/30/2020)\\
   %\emph{Advanced alchemical free energy methods for drug discovery}
-  Current position: \emph{Scientist}, \href{http://www.merck.com}{Merck Research Laboratories, London}
+  Current position: \emph{Senior Scientist I}, \href{http://www.merck.com}{Merck Sharp \& Dohme (MSD)}
   
   \item Marcus~Wieder, PhD University of Vienna (9/1/2018--4/16/2020)\\
   %\emph{Modeling tautomer shifts upon binding of small druglike molecules}
   Current position: \emph{Faculty}, \href{https://www.univie.ac.at/en/}{University of Vienna}
   
   \item Levi N. Naden (until 8/10/2018)\\
-  Current position: \emph{Software Scientist} at the NSF \href{http://molssi.org}{\bf Molecular Sciences Software Institute (MolSSI)}
+  Current position: \emph{Software Scientist} at the NSF \href{http://molssi.org}{Molecular Sciences Software Institute (MolSSI)}
   
   \item Sonya M. Hanson (until 6/30/2017)\\
-  Next position: \emph{Postdoctoral Researcher with Joachim Frank}, \href{http://franklab.cpmc.columbia.edu/franklab/}{{\bf Columbia University}}\\
+  Next position: \emph{Postdoctoral Researcher with Joachim Frank}, \href{http://franklab.cpmc.columbia.edu/franklab/}{{Columbia University}}\\
   %Current position: Humboldt Research Fellow with \href{https://www.biophys.mpg.de/en/hummer.html}{{\bf Gerhard Hummer}} at MPI Biophysics, Frankfurt
-  Current position: Group Leader and Research Scientist, Center for Computational Biology, Flatiron Institute, Simons Foundation, NYC
+  Current position: Group Leader and Research Scientist, Center for Computational Biology, \\ \href{https://www.simonsfoundation.org/flatiron/}{Flatiron Institute}, Simons Foundation, NYC
  
   \item Gregory Ross (until 6/30/2017)\\
-  Current position: \emph{Senior Scientist}, Free Energy Methods, \href{http://www.schrodinger.com}{{\bf Schr\"{o}dinger}}
+  Current position: \emph{Principal Scientist}, \href{http://www.schrodinger.com}{{ Schr\"{o}dinger}}
   
   \item David W.~H.~Swenson (until 12/30/2015)\\
-  Current position: \emph{Postdoctoral Researcher}, \href{http://www.acmm.nl/molsim/users/swenson/index.html}{{\bf Universiteit von Amsterdam}}
+  %Current position: \emph{Postdoctoral Researcher}, \href{http://www.acmm.nl/molsim/users/swenson/index.html}{{\bf Universiteit von Amsterdam}}
+  Current position: \emph{Software Scientist}, \href{http://openfree.energy}{Open Free Energy Consortiun}
   
   \item Daniel L.~Parton (until 8/31/2015)\\
-  Current position: \emph{Director, Data Science Practice}, \href{http://www.bardess.com/}{{\bf Bardess Group}}
+  Current position: \emph{Lead Data Scientist}, \href{http://www.bardess.com/}{{Bardess Group}}
   
   \item Kyle A.~Beauchamp (until 6/12/2015)\\
-  Current position: \emph{Director of Data Science}, \href{http://www.tempus.com}{{\bf Tempus}}
+  Current position: \emph{Senior Director of Data Science}, \href{http://www.tempus.com}{{Tempus}}
   
   \item Jan-Hendrik Prinz (until 1/30/2015)\\
-  Current position: \emph{Digital SolutionsArchitect}, \href{http://www.keylight.de/}{{\bf Keylight GmbH}}
+  Current position: \emph{Digital Solutions Architect}, \href{http://www.keylight.de/}{{Keylight GmbH}}
   
   \item Sarah E.~Boyce (until 10/31/2013)\\
-  Current position: \emph{Senior Principal Scientist, Drug Discovery Group},  \href{http://www.schrodinger.com}{{\bf Schr\"{o}dinger}}
+  Current position: \emph{Director},  \href{http://www.schrodinger.com}{{Schr\"{o}dinger}}
 
 \end{itemize}
 
@@ -1908,15 +2065,15 @@ The goal of this project is to use computational techniques that explicitly inco
   \item Chaya Stern (4/01/2014--6/30/2020)\\
   Tri-Institutional Training Program in Chemical Biology (TPCB)\\
   %\emph{Analysis of single-molecule biophysical experiments; Bayesian inference for forcefield parameterization}
-  Current position: \emph{Computational Chemistry Scientist},  \href{http://deepcure.ai}{DeepCure}
+  Current position: \emph{Senior Principal Scientist},  \href{https://odysseytx.com/}{Odyssey Therapeutics}
  
   \item Steven Albanese (6/1/2015--3/31/2019)\\
   Gerstner Graduate Program (GSK)\\
-  Current position: \emph{Senior Scientist, Drug Discovery Group},  \href{http://www.schrodinger.com}{{\bf Schr\"{o}dinger}}
+  Current position: \emph{Principal Scientist II},  \href{http://www.schrodinger.com}{{Schr\"{o}dinger}}
   
   \item Patrick B.~Grinaway (7/1/2013--12/31/2018)\\
   Program in Physiology, Biophysics, and Systems Biology (PBSB)\\
-  Current position: \emph{Scientist, \href{https://www.onai.com}{\bf Onai}}
+  Current position: \emph{Scientist, \href{https://www.onai.com}{Onai}}
 
   \item Julie M.~Behr (1/10/2014--12/31/2016)\\
   Tri-Institutional Program in Computational Biology and Medicine (CBM)\\
@@ -1936,40 +2093,11 @@ The goal of this project is to use computational techniques that explicitly inco
   Current position: \emph{Research Associate}, \href{http://biontech.de}{BioNTech}
 
   \item Lucelenie Rodriguez (7/1/2015--12/31/2016; 12/4/2017--7/20/2018)\\
-  Current position: \emph{Medical student}, \href{https://med.nyu.edu/education}{\bf NYU School of Medicine}
+  Current position: \emph{Medical student}, \href{https://med.nyu.edu/education}{NYU School of Medicine}
 
   \item Erin Grundy (6/1/18--7/31/2019)\\
-  Current position: \emph{Graduate student}, \href{https://smhs.gwu.edu/ibs/program/microbio-immunology}{\bf George Washington University}
+  Current position: \emph{Graduate student}, \href{https://smhs.gwu.edu/ibs/program/microbio-immunology}{George Washington University}
 \end{itemize}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% SIGNIFICANT PUBLICATIONS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\eject
-%
-%\section*{Significant Publications}
-%
-%\newarticle{setd8-msm}{Rafal P. Wiewiora$^\dag$, Shi Chen$^\dag$, Fanwang Meng, Nicolas Babault, Anqi Ma, Wenyu Yu, Kun Qian, Hao Hu, Hua Zou, Junyi Wang, Shijie Fan, Gil Blum, Fabio Pittella-Silva, Kyle A. Beauchamp, Wolfram Tempel, Hualing Jiang, Kaixian Chen, Robert Skene, Y. George Zheng, Peter J. Brown, Jian Jin, \jdc$^\ddag$, and Minkui Luo$^\ddag$}{The dynamic conformational landscapes of the protein methyltransferase SETD8}{Submitted}{bioR$\chi$iv}{https://doi.org/10.1101/438994}{In this work, we show how targeted X-ray crystallography using covalent inhibitors and depletion of native ligands to reveal structures of low-population hidden conformations can be combined with massively distributed molecular simulation to resolve the functional dynamic landscape of the protein methyltransferase SETD8 in unprecedented atomistic detail. Using an aggregate of six milliseconds of fully atomistic simulation from Folding\@home, we use Markov state models to illuminate the conformational dynamics of this important epigenetic protein.}
-%
-%\newarticle{ddr1-dfg-pmf}{Hanson SM$^*$, Georghiou G$^*$, Miller WT, Rest JS, \jdc$\ddag$, and Seeliger MA$\ddag$}{What makes a kinase promiscuous for inhibitors?}{\emph{Cell Chemical Biology}, in press}{DOI}{https://doi.org/10.1016/j.chembiol.2018.11.005}{Using a combination of chemogenomics, structural biology, and molecular simulation approaches, we identify a set of human kinases that are especially promiscuous binders of small molecule kinase inhibitors, and show that a prototypical member of this class, DDR1, achieves this promiscuity by virtue of its more stable Asp-DFG-out conformation.}
-%
-%\newarticle{kinase-mutations}{Hauser K, Negron C, Albanese SK, Ray S, Steinbrecher T, Abel R, and \jdc, and Wang L}{Predicting resistance of clinical Abl mutations to targeted kinase inhibitors using alchemical free-energy calculations}{\emph{Communications Biology} 1:70, 2018}{DOI}{https://doi.org/10.1038/s42003-018-0075-x}{The emergence of resistance mutations are a significant problem in precision cancer therapy. With cancer centers now routinely collecting tumor sequencing panels, it is apparent the vast majority of missense mutations in kinases---for which more than 36 small molecule inhibitors are available---are very rare, and no information will be available as to whether these mutations might reduce therapeutic efficacy for some inhibitors by inducing drug resistance. Here, we take the first steps toward using physical modeling to predict individualized therapeutic response, assessing how accurately the impact of clinical Abl mutations on inhibitor binding affinity can be predicted. Our results suggest free energy calculations are a promising tool for aiding therapeutic decisionmaking.}
-%
-%\newarticle{aurka-phosphorylation}{Ruff EF, Muretta JM, Thompson A, Lake E, Cyphers S, Albanese SK, Hanson SM, Behr JM, Thomas DT, \jdc, and Levinson NM}{A dynamic mechanism for allosteric activation of Aurora kinase A by activation loop phosphorylation}{\emph{eLife} 7:e32766, 2018}{DOI}{https://doi.org/10.7554/eLife.32766}{Kinase phosphorylation is canonically believed to induce a conformational change of the DFG loop that borders the ATP binding site from out to in. Surprisingly, it seems that not all kinases behave this way. Through a combination of FRET, IR, and EPR labeling and large-scale molecular dynamics simulations, we show that phorphorylation activates Aurora kinase by a novel mechanism that does not simply correspond to a DFG-out to DFG-in population shift, but rather reorganization of DFG-in subpopulations. This paper follows our prior report in \emph{Nature Chemical Biology} on the role of Tpx2 in activating a cellular subpopulation of Aurora by another surprising mechanism.}
-%
-%%\newarticle{mtor-mutations.pdf}{Xu~J, Pham~CG, Albanese~SK, Dong~Y, Oyama~T, Lee~CH, Rodrik-Outmezguine~V, Yao~Z, Han~S, Chen~D, Parton~DL, \jdc, Rosen~N, Cheng~EH, and Hsieh~JJ}{Mechanistically distinct cancer-associated mTOR activation clusters predict sensitivity to rapamycin}{\emph{Journal of Clinical Investigation} 126:3529, 2016}{DOI}{https://doi.org/10.1172/JCI86120}{We use massively parallel distributed molecular simulations on Folding\@home to probe the mechanism activating mutations of the mTOR kinase identified in clinical populations.  {\color{red}Expand to paragraph.}}
-%
-%\newarticle{kinome-expression-tree}{Albanese SK*, Parton DL*, Isik M$\dag$, Rodr\'{i}guez-Laureano L$\dag$, Hanson SM, Gradia S, Jeans C, Levinson NM, Seeliger M, and \jdc}{An open library of human kinase domain constructs for automated bacterial expression}{\emph{Biochemistry} 57:4675, 2018}{DOI}{http://doi.org/10.1021/acs.biochem.7b01081}{To establish a tractable experimental system for studying the biophysical determinants of selective kinase inhibitor resistance in clinical cancer mutations, we engineer a library of human kinase domains with useful bacterial expression with phosphatase coexpression.}
-%
-%\newarticle{ensembler.pdf}{Parton DL, Grinaway PB, Hanson SM, Beauchamp KA, and \jdc}{Ensembler: Enabling high-throughput molecular simulations at the superfamily scale}{\emph{PLoS Computational Biology} 12:e1004728, 2016}{DOI}{http://dx.doi.org/10.1371/journal.pcbi.1004728} {Traditionally, biomolecular simulations has focused on the study of one protein at a time. In the modern genome-enabled, high-throughput world, however, there is much to be gained by studying entire families, superfamilies, or mutational variants at the same time. To overcome the lack of tools in our field to make this possible, we developed a new high-throughput pipeline to enable massively parallel molecular simulation studies of biomolecular dynamics at the superfamily scale, illustrating its application to protein tyrosine kinases, an important class of drug targets in cancer.}
-%
-%%\newarticle{identifying-ligand-binding-sites.pdf}{Wang K, \jdc, Yang Y, and Shirts MR}{Identifying ligand binding sites and poses using GPU-accelerated Hamiltonian replica exchange molecular dynamics}{\emph{Journal of Computer Aided Molecular Design} 27:989--1007, 2013}{DOI}{http://dx.doi.org/10.1007/s10822-013-9689-8}{This paper was the first to demonstrate how GPU-accelerated molecular dynamics can be used to compute binding free energies, using Hamiltonian replica exchange methodologies that are now in standard use in drug discovery through both academic codes and commercial products, such as Schrodinger FEP+. In addition, we demonstrated how we could use this technique to identify binding sites that may be previously unknown.}
-%
-%%\newarticle{ncmc.pdf}{Nilmeier JP, Crooks GE, Minh DDL, and \jdc}{Nonequilibrium candidate Monte Carlo is an efficient tool for equilibrium simulation}{\emph{Proceedings of the National Academy of Sciences} 108:E1009, 2011}{DOI}{http://dx.doi.org/10.1073/pnas.1106094108}{We present a significant generalization of Monte Carlo methods that provide an enormously useful tool for enhancing the efficiency of molecular simulations and enabling molecular design. This technique allows astronomical increases in acceptance rates---such as efficiency gains of 10$^{30}$---allowing efficient Monte Carlo proposals for part of the system to be effectively mixed with molecular dynamics. This approach is now allowing our lab to dynamically treat protonation states, insert/delete counterions, rapidly reorient ligands in binding sites, and sample over chemical species within a single simulation.}
-%
-%\eject
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % REFERENCES
