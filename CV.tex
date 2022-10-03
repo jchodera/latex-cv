@@ -136,6 +136,11 @@
   #2 \\ #1
 }\spaceTalk\\}
 
+% DEBUG
+%\renewcommand{\talk}[2]{
+%\textbf{\arabic{talknumber}} $\cdot$  \emph{#1} $\cdot$ \emph{#2}\\
+%\addtocounter{talknumber}{1}}
+
 % SPACING
 \newcommand{\spaceEd}{\vspace{1ex}}
 \newcommand{\spaceRes}{\vspace{1ex}}
@@ -181,7 +186,7 @@
 
 % Change the appearance of section and subsection headings
 \sectionfont{\mdseries\large\underline} 
-\subsectionfont{\mdseries\scshape\normalsize} 
+\subsectionfont{\bfseries\scshape\normalsize} 
 \subsubsectionfont{\bfseries\upshape\normalsize} 
 
 % Control tightness of spacing
@@ -1103,149 +1108,276 @@ Ad hoc reviewer and virtual panel member for Chemical Theory, Models, and Comput
 % TALKS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\section*{Recent Invited Talks}
-%
-%\vspace{-0.1in}
-%
-%\subsection*{Seminars}
-%
-%\vspace{-0.1in}
-%
-%
-%\talk{15 Nov 2018}{Bethesda, MD}Advancing quantitative biophysical predictions: How can we move things forward?\\ {\small National Institute for Advancing Translational Sciences (NIH NCATS)}
-%
-%\talk{4 Oct 2018}{Philadelphia, PA}What will it take to predict kinase inhibitor selectivity and resistance using computational physical modeling?\\ {\small Fox Chase Cancer Center}
-%
-%\talk{15 Aug 2018}{Waltham, MA}Predicting porin permeation for antimicrobial drug development \\ {\small Entasis Therapeutics}
-%
-%\talk{18 Jul 2018}{G\"{o}ttingen, Germany}Redesigning drug design \\ {\small Max Planck Institute for Biophysical Chemistry}
-%
-%\talk{17 Jul 2018}{Berlin, Germany}Redesigning drug design: Selectively targeting the kinome and beyond \\ {\small Charit\'{e}}
-%
-%\talk{8 Jul 2018}{Darmstadt, Germany}Can free energy really be free? The state of open source absolute and relative free energy calculations \\ {\small Merck KGaA}
-%
-%\talk{22 May 2018}{Cambridge, MA}What will it take to predict kinase inhibitor selectivity and resistance using computational physical modeling? \\ {\small Blueprint Medicines}
-%
-%\talk{21 May 2018}{Cambridge, MA}Redesigning drug design: Selectively targeting the kinome and beyond \\ {\small Pfizer}
-%
-%\talk{12 Apr 2018}{San Francisco, CA}Redesigning drug design: Selectively targeting the kinome and beyond \\ {\small Pharmaceutical Chemistry Departmental Seminar, UCSF}
-%
-%\talk{9 Feb 2018}{Portland, OR}Selective kinase inhibition and emergence of resistance mutations in cancer:\\ Probing driving forces with physical modeling and automated biophysical experiments \\ {\small Biomedical Engineering Seminar, OHSU}
-%
-%\talk{14 Dec 2017}{Minneapolis, MN}What will it take to predict kinase inhibitor selectivity and resistance using computational physical modeling? \\ {\small Department of Pharmacology, University of Minnesota}\vspace{0.5ex}
-%
-%\talk{27 Oct 2017}{Stanford, CA}How can physical modeling play a major role in drug discovery and biomedicine? \\ {\small Vijay Pande group, Stanford University}\vspace{0.5ex}
-%
-%\talk{13 Oct 2017}{New York, NY}Markov chain Monte Carlo and nonequilibrium statistical mechanics in drug discovery\\ {\small Applied Math Seminar, NYU Courant}\vspace{0.5ex}
-%
-%\talk{18 Sep 2017}{Darmstadt, Germany}Advancing drug design with alchemical free energy calculations\\ {\small Merck Darmstadt}\vspace{0.5ex}
-%
-%\talk{16 Jun 2017}{Mountain View, CA}Redesigning drug design\\ {\small Google Advanced Sciences}\vspace{0.5ex}
-%
-%\talk{9 May 2017}{Rahway, NJ}Advancing quantitative biophysical predictions with blind challenges\\ {\small Merck Formulations}\vspace{0.5ex}
-%
-%\talk{10 Apr 2017}{San Francisco, CA}Redesigning drug design\\ {\small Diane Barber lab, UCSF}\vspace{0.5ex}
-%
-%\talk{14 Feb 2017}{Boston, MA}Is there a use for nonequilibrium statistical mechanics in drug design?\\ {\small Harvard Widely Applied Math Seminar}\vspace{0.5ex}
-%
-%\talk{15 Dec 2016}{Collegeville, PA}Redesigning drug design\\ {\small GlaxoSmithKline}\vspace{0.5ex}
-%
-%\talk{8 Dec 2016}{Bethesda, MD}Redesigning drug design\\ {\small Bernie Brooks group, NHLBI National Institutes of Health}\vspace{0.5ex}
-%
-%\talk{28 Oct 2016}{Stanford, CA}Redesigning drug design\\ {\small Vijay Pande group, Stanford University}\vspace{0.5ex}
-%
-%\talk{15 Sep 2016}{Barcelona, Spain}Redesigning drug design\\ {\small Universitat Pompeu Fabra}\vspace{0.5ex}
-%
-%\talk{13 Sep 2016}{Slough, UK}Redesigning drug design\\ {\small UCB Pharma}\vspace{0.5ex}
-%
-%\talk{6 Sep 2016}{Darmstadt, Germany}Alchemical free energy calculations for drug discovery\\ {\small Merck KGaA}\vspace{0.5ex}
-%
-%\talk{29 Oct 2015}{San Francisco, CA}Redesigning drug design\\ {\small Autodesk}\vspace{0.5ex}
-%
-%\talk{8 Oct 2015}{Rahway, NJ}Redesigning drug design\\ {\small Merck}\vspace{0.5ex}
-%
-%\talk{24 Jul 2015}{Cambridge, MA}Redesigning drug design\\ {\small Novartis}\vspace{0.5ex}
-%
-%\talk{3 Jun 2015}{Tokyo, Japan}Redesigning drug design\\ {\small University of Tokyo / RCAST}\vspace{0.5ex}
-%
-%\talk{15 May 2015}{Waltham, MA}Redesigning drug design\\ {\small AstraZeneca}\vspace{0.5ex}
-%
-%\talk{13 May 2015}{New Haven, CT}Redesigning drug design\\ {\small Yale Theoretical Chemistry Seminar}\vspace{0.5ex}
-%
-%\talk{15 Apr 2015}{Chicago, IL}Redesigning drug design\\ {\small Illinois Institute of Technology}\vspace{0.5ex}
-%
-%\talk{8 Apr 2015}{New Brunswick, NJ}Making the most of limited data in biophysics:\\Challenges in single-molecule biophysics, nonequilibrium statistical mechanics, and drug discovery\\ {\small Rutgers --- Department of Statistics and Biostatistics Seminar}\vspace{0.5ex}
-%
-%%\color{red}
-%%[Lots more to be filled in for 2016 and earlier]
-%%\color{black}
-%
-%\subsection*{Meetings and Conferences}
-%
-%\talk{5 Mar 2019}{Baltimore, MD}Closing the loop in automated design and measurement: Scalable inference for biophysical experiments\\ {\small Biophysical Society Meeting: Symposium on Bayesian methods in biophysics}\vspace{0.5ex}
-%
-%\talk{27 Nov 2018}{Stockholm}Streamlining molecular simulation data\\ {\small BioExcel Workshop on Interoperability and Reproducibility in Molecular Simulations}\vspace{0.5ex}
-%
-%\talk{11 Nov 2018}{Berlin}Redesigning drug design\\ {\small Future Medicine Berlin}\vspace{0.5ex}
-%
-%\talk{7 Oct 2018}{Tempe, AZ}What can protein folding teach us about drug discovery?\\ {\small Statistical Physics in Biology}\vspace{0.5ex}
-%
-%\talk{2 Oct 2018}{Vienna, Austria}Rare events and large-scale conformational changes in drug discovery\\ {\small ECAM Workshop: Large scale activated event simulations}\vspace{0.5ex}
-%
-%\talk{12 Jun 2018}{Biddeford, ME}What can physical modeling tell us about mutational mechanisms of kinase inhibitor resistance? \\ {\small Human Genetic Variation GRC}\vspace{0.5ex}
-%
-%\talk{8 Mar 2018}{Santa Fe, NM}Testing the Friesner Conjecture: Are relative free energy calculations always more efficient than absolute? \\ {\small OpenEye CUP XVIII}\vspace{0.5ex}
-%
-%\talk{22 Feb 2018}{San Diego, CA}The SAMPL6 Challenges: Advancing molecular modeling accuracy with targeted blind challenges \\ {\small Drug Design Data Resource (D3R) Workshop}\vspace{0.5ex}
-%
-%\talk{13 Nov 2017}{New York, MA}Bridging scales in cancer\\ {\small Simons MPS Conference}\vspace{0.5ex}
-%
-%\talk{9 Nov 2017}{Cambridge, MA}Building next-generation forcefields and moving free energy calculations to the cloud\\ {\small OpenEye MiniCUP}\vspace{0.5ex}
-%
-%\talk{20 Sep 2017}{Berlin, Germany}Next-generation small molecule forcefields\\ {\small RDKit User Group Meeting}\vspace{0.5ex}
-%
-%\talk{24 Aug 2017}{Gaithersberg, MD}Challenges and opportunities for reproducibility and reliability in molecular simulations\\ {\small MolSSI Best Practices Workshop, NIST}\vspace{0.5ex}
-%
-%\talk{15 Aug 2017}{Leiden, Netherlands}Developing GPU-accelerated molecular simulation tools with OpenMM and the Omnia ecosystem\\ {\small ECAM Software Workshop on Path Sampling}\vspace{0.5ex}
-%
-%\talk{14 Jul 2017}{Telluride, CO}Toward realizing the dream of free-energy based small molecule design\\ {\small Telluride Free Energy Workshop}\vspace{0.5ex}
-%
-%\talk{2 Jun 2017}{New York, NY}What can physical modeling tell us about mutational mechanisms of kinase inhibitor resistance?\\ {\small NYU Genomics Symposium}\vspace{0.5ex}
-%
-%\talk{29 May 2017}{Toronto, Canada}The statistical mechanics of drug discovery\\ {\small Canadian Society of Chemistry 100th Anniversary National Meeting}\vspace{0.5ex}
-%
-%\talk{3 May 2017}{Waltham, MA}What can physical modeling tell us about mutational mechanisms of kinase inhibitor resistance?\\ {\small EMBL-EBI Informatics and -omics for Oncology Drug Resistance}\vspace{0.5ex}
-%
-%\talk{8 Mar 2017}{Santa Fe, NM}Can free energies really be free? Alchemical free energy calculations in the cloud\\ {\small OpenEye CUP XVII}\vspace{0.5ex}
-%
-%\talk{8 Oct 2016}{Houston, TX}Advancing Quantitative Biophysical Predictions\\ {\small Molecular Software Sciences Institute --- Biomolecular Simulation}\vspace{0.5ex}
-%
-%\talk{14 Sep 2016}{London, UK}Redesigning drug design\\ {\small CCPBioSim --- Kings College London}\vspace{0.5ex}
-%
-%\talk{23 Aug 2016}{Philadelphia, PA}What is required for alchemical free energy calculations to be useful for predicting drug polypharmacology?\\ {\small ACS Fall National Meeting}\vspace{0.5ex}
-%
-%\talk{22 Aug 2016}{Philadelphia, PA}Advancing quantitative biophysical predictions: What can be gained from industry-academic data sharing?\\ {\small ACS Fall National Meeting}\vspace{0.5ex}
-%
-%\talk{17 May 2016}{Boston, MA}How can we combine computation and experiment to move the field forward?\\ {\small Free Energy Calculations in Drug Discovery, Vertex}\vspace{0.5ex}
-%
-%\talk{16 May 2016}{San Diego, CA}Redesigning drug design\\ {\small ACS San Diego}\vspace{0.5ex}
-%
-%\talk{4 Mar 2016}{Edinburgh, UK}Redesigning drug design\\ {\small International Centre for Mathematical Sciences (ICMS)}\vspace{0.5ex}
-%
-%\talk{1 Mar 2016}{La Jolla, CA}What will it take to design kinase inhibitors with desired selectivity and resistance profiles?\\ {\small GTC 11th Protein Kinases in Drug Discovery Meeting}\vspace{0.5ex}
-%
-%\talk{19 Oct 2015}{Edinburgh, UK}Biomolecular software interoperability\\ {\small CECAM Software Interoperability Workshop}\vspace{0.5ex}
-%
-%\talk{18 Sep 2015}{Vienna, Austria}Reaction coordinates in drug discovery\\ {\small ESI Insight from Molecular Simulations}\vspace{0.5ex}
-%
-%\talk{8 Sep 2015}{Berlin, Germany}Redesigning drug design\\ {\small World Molecular Kinetics Meeting}\vspace{0.5ex}
-%
-%\talk{5 Jun 2015}{Tokyo, Japan}Redesigning drug design\\ {\small OpenEye JCUP VI}\vspace{0.5ex}
-%
-%\talk{21 Jan 2015}{New York, NY}Redesigning drug design\\ {\small New York Structural Biology Discussion Group}\vspace{0.5ex}
+\section*{Recent Invited Talks}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
+\vspace{-0.1in}
+
+\subsection*{Seminars}
+
+\vspace{-0.1in}
+
+\talk{6 Jun 2022}{Toronto, Canada}The COVID Moonshot: Open science discovery of a novel SARS-CoV-2 antiviral \\ {\small University of Toronto}\vspace{0.5ex}
+
+\talk{14 Apr 2022}{ZOOM}The future of free energy: Calculations that can learn from experiment \\ {\small OpenEye Scientific}\vspace{0.5ex}
+
+\talk{12 Apr 2022}{ZOOM}The future of free energy: Calculations that can learn from experiment \\ {\small Amgen}\vspace{0.5ex}
+
+\talk{3 Feb 2022}{ZOOM}Open science antiviral discovery with the COVID Moonshot and the open source discovery ecosystem \\ {\small NIH BISTI Seminar}\vspace{0.5ex}
+
+\talk{16 Dec 2021}{ZOOM}The COVID Moonshot: How we got here and where we're going \\ {\small COVID Moonshot Livestream}\vspace{0.5ex}
+
+\talk{8 Dec 2021}{ZOOM}Redesigning drug design \\ {\small University of Toronto}\vspace{0.5ex}
+
+\talk{8 Dec 2021}{ZOOM}Frontiers in structure-based drug discovery \\ {\small Rutgers IQB Seminar (celebrating 50 years of the PDB)}\vspace{0.5ex}
+
+\talk{4 Oct 2021}{ZOOM}Next-generation technologies for computer-driven drug discovery: Teaching free energy calculations to learn, scaling predictions across the kinome, and automating discovery \\ {\small Genentech}\vspace{0.5ex}
+
+\talk{14 Jun 2021}{ZOOM}Redesigning drug design \\ {\small Abbvie}\vspace{0.5ex}
+
+\talk{23 Apr 2021}{ZOOM}The COVID Moonshot: An open science collaboration to develop an orally bioavailable inhibitor of SARS-CoV-2 main viral protease \\ {\small Laufer Center, Stony Brook University}\vspace{0.5ex}
+
+\talk{12 Apr 2021}{ZOOM}Next-generation strategies for designing novel kinase inhibitors and predicting the emergence of cellular resistance \\ {\small Albert Einstein College of Medicine}\vspace{0.5ex}
+
+\talk{31 Mar 2021}{ZOOM}Redesigning drug design \\ {\small Oxford Centre for Medicines Discovery}\vspace{0.5ex}
+
+\talk{16 Dec 2020}{ZOOM} Folding@home: Crowdsourcing computing for a cure \\ {\small COVID Moonshot: State of the Moonshot Livestream}\vspace{0.5ex}
+
+\talk{8 Apr 2020}{ZOOM}The COVID Moonshot: Crowdsourcing a COVID-19 Cure \\ {\small Folding@home 20th Anniversary Livestream}\vspace{0.5ex}
+
+\talk{8 Apr 2020}{ZOOM}COVID Moonshot: Docking and free energy calculations \\ {\small BioSolveIT webinar}\vspace{0.5ex}
+
+\talk{8 Apr 2020}{ZOOM}Drug discovery and how to fix it \\ {\small Google X}\vspace{0.5ex}
+
+\talk{3 Mar 2020}{San Francisco, CA}Accelerating molecular discovery of small molecule modulators of protein-protein interactions with computational chemistry \\ {\small Foresite Labs}\vspace{0.5ex}
+
+\talk{25 Feb 2020}{New York, NY}Redesigning drug design \\ {\small Albert Einstein College of Medicine}\vspace{0.5ex}
+
+\talk{29 Jan 2020}{San Francisco, CA}Building predictive models of antibody:antigen mutations \\ {\small Vir Biotechnology}\vspace{0.5ex}
+
+\talk{13 Nov 2019}{Berlin, Germany}Redesigning drug design \\ {\small Berlin Pharmaceutical Research Colloquium}\vspace{0.5ex}
+
+\talk{7 Nov 2019}{Biberach, Germany}Toward adaptive free energy calculations and physically-informed machine learning for predicting affinity, selectivity, and resistance \\ {\small Boehringer Ingelheim}\vspace{0.5ex}
+
+\talk{6 Sep 2019}{Pittsburgh, PA}Harnessing 100,000 computers around the world to probe kinase activation, inhibition, and resistance \\ {\small University of Pittsburgh}\vspace{0.5ex}
+
+\talk{6 Aug 2019}{Edinburgh, UK}Alchemical free energy calculations, adaptive sampling, and machine learning \\ {\small University of Edinburgh}\vspace{0.5ex}
+
+\talk{2 Jun 2019}{Dortmund, Germany}Redesigning drug design \\ {\small Dortmund Universit\"{a}t}\vspace{0.5ex}
+
+\talk{31 May 2019}{Slough, UK}Predictive models for molecular design \\ {\small UCB Pharma}\vspace{0.5ex}
+
+\talk{29 May 2019}{Wuppertal, Germany}Predictive models for molecular design  \\ {\small Bayer}\vspace{0.5ex}
+
+\talk{14 May 2019}{Cambridge, MA}Predictive models for molecular design \\ {\small XtalPi}\vspace{0.5ex}
+
+\talk{7 May 2019}{Tampa, FL}Alchemical free energy calculations for biomolecular design\\ {\small Vir Biotechnology}\vspace{0.5ex}
+
+\talk{29 Apr 2019}{Tampa, FL}Harnessing 100,000 computers around the world to probe kinase activation, inhibition, and resistance \\ {\small University of South Florida}\vspace{0.5ex}
+
+\talk{15 Nov 2018}{Bethesda, MD}Advancing quantitative biophysical predictions: How can we move things forward?\\ {\small National Institute for Advancing Translational Sciences (NIH NCATS)}
+
+\talk{4 Oct 2018}{Philadelphia, PA}What will it take to predict kinase inhibitor selectivity and resistance using computational physical modeling?\\ {\small Fox Chase Cancer Center}
+
+\talk{15 Aug 2018}{Waltham, MA}Predicting porin permeation for antimicrobial drug development \\ {\small Entasis Therapeutics}
+
+\talk{18 Jul 2018}{G\"{o}ttingen, Germany}Redesigning drug design \\ {\small Max Planck Institute for Biophysical Chemistry}
+
+\talk{17 Jul 2018}{Berlin, Germany}Redesigning drug design: Selectively targeting the kinome and beyond \\ {\small Charit\'{e}}
+
+\talk{8 Jul 2018}{Darmstadt, Germany}Can free energy really be free? The state of open source absolute and relative free energy calculations \\ {\small Merck KGaA}
+
+\talk{22 May 2018}{Cambridge, MA}What will it take to predict kinase inhibitor selectivity and resistance using computational physical modeling? \\ {\small Blueprint Medicines}
+
+\talk{21 May 2018}{Cambridge, MA}Redesigning drug design: Selectively targeting the kinome and beyond \\ {\small Pfizer}
+
+\talk{12 Apr 2018}{San Francisco, CA}Redesigning drug design: Selectively targeting the kinome and beyond \\ {\small Pharmaceutical Chemistry Departmental Seminar, UCSF}
+
+\talk{9 Feb 2018}{Portland, OR}Selective kinase inhibition and emergence of resistance mutations in cancer:\\ Probing driving forces with physical modeling and automated biophysical experiments \\ {\small Biomedical Engineering Seminar, OHSU}
+
+\talk{14 Dec 2017}{Minneapolis, MN}What will it take to predict kinase inhibitor selectivity and resistance using computational physical modeling? \\ {\small Department of Pharmacology, University of Minnesota}\vspace{0.5ex}
+
+\talk{27 Oct 2017}{Stanford, CA}How can physical modeling play a major role in drug discovery and biomedicine? \\ {\small Vijay Pande group, Stanford University}\vspace{0.5ex}
+
+\talk{13 Oct 2017}{New York, NY}Markov chain Monte Carlo and nonequilibrium statistical mechanics in drug discovery\\ {\small Applied Math Seminar, NYU Courant}\vspace{0.5ex}
+
+\talk{18 Sep 2017}{Darmstadt, Germany}Advancing drug design with alchemical free energy calculations\\ {\small Merck Darmstadt}\vspace{0.5ex}
+
+\talk{16 Jun 2017}{Mountain View, CA}Redesigning drug design\\ {\small Google Advanced Sciences}\vspace{0.5ex}
+
+\talk{9 May 2017}{Rahway, NJ}Advancing quantitative biophysical predictions with blind challenges\\ {\small Merck Formulations}\vspace{0.5ex}
+
+\talk{10 Apr 2017}{San Francisco, CA}Redesigning drug design\\ {\small Diane Barber lab, UCSF}\vspace{0.5ex}
+
+\talk{14 Feb 2017}{Boston, MA}Is there a use for nonequilibrium statistical mechanics in drug design?\\ {\small Harvard Widely Applied Math Seminar}\vspace{0.5ex}
+
+\talk{15 Dec 2016}{Collegeville, PA}Redesigning drug design\\ {\small GlaxoSmithKline}\vspace{0.5ex}
+
+\talk{8 Dec 2016}{Bethesda, MD}Redesigning drug design\\ {\small Bernie Brooks group, NHLBI National Institutes of Health}\vspace{0.5ex}
+
+\talk{28 Oct 2016}{Stanford, CA}Redesigning drug design\\ {\small Vijay Pande group, Stanford University}\vspace{0.5ex}
+
+\talk{15 Sep 2016}{Barcelona, Spain}Redesigning drug design\\ {\small Universitat Pompeu Fabra}\vspace{0.5ex}
+
+\talk{13 Sep 2016}{Slough, UK}Redesigning drug design\\ {\small UCB Pharma}\vspace{0.5ex}
+
+\talk{6 Sep 2016}{Darmstadt, Germany}Alchemical free energy calculations for drug discovery\\ {\small Merck KGaA}\vspace{0.5ex}
+
+\talk{29 Oct 2015}{San Francisco, CA}Redesigning drug design\\ {\small Autodesk}\vspace{0.5ex}
+
+\talk{8 Oct 2015}{Rahway, NJ}Redesigning drug design\\ {\small Merck}\vspace{0.5ex}
+
+\talk{24 Jul 2015}{Cambridge, MA}Redesigning drug design\\ {\small Novartis}\vspace{0.5ex}
+
+\talk{3 Jun 2015}{Tokyo, Japan}Redesigning drug design\\ {\small University of Tokyo / RCAST}\vspace{0.5ex}
+
+\talk{15 May 2015}{Waltham, MA}Redesigning drug design\\ {\small AstraZeneca}\vspace{0.5ex}
+
+\talk{13 May 2015}{New Haven, CT}Redesigning drug design\\ {\small Yale Theoretical Chemistry Seminar}\vspace{0.5ex}
+
+\talk{15 Apr 2015}{Chicago, IL}Redesigning drug design\\ {\small Illinois Institute of Technology}\vspace{0.5ex}
+
+\talk{8 Apr 2015}{New Brunswick, NJ}Making the most of limited data in biophysics:\\Challenges in single-molecule biophysics, nonequilibrium statistical mechanics, and drug discovery\\ {\small Rutgers --- Department of Statistics and Biostatistics Seminar}\vspace{0.5ex}
+
+%\color{red}
+%[Lots more to be filled in for 2016 and earlier]
+%\color{black}
+
+\subsection*{Meetings and Conferences}
+
+\talk{31 Aug 2022}{Toronto, Canada}Enabling autonomous decisionmaking in drug discovery \\ {\small ACCELERATE}\vspace{0.5ex}
+
+\talk{15 Jul 2022}{Barcelona, Spain}Teaching free energy calculations to learn \\ {\small MLSMM}\vspace{0.5ex}
+
+\talk{2 Jun 2022}{Boston, MA}Next-generation technologies for structure-enabled drug design \\ {\small MPM Capital Scientific Advisors Meeting}\vspace{0.5ex}
+
+\talk{23 May 2022}{San Diego, CA}The COVID Moonshot: Open science discovery of a novel SARS-CoV-2 antiviral \\ {\small RECOMB}\vspace{0.5ex}
+
+\talk{29 Apr 2022}{ZOOM}Teaching free energy calculations to learn \\ {\small ICML MLDD}\vspace{0.5ex}
+
+\talk{24 Mar 2022}{ZOOM}New frontiers in machine learning for drug discovery \\ {\small Acceleration Consortium}\vspace{0.5ex}
+
+\talk{20 Mar 2022}{ZOOM}The future of free energy: Calculations that can learn from experiment \\ {\small ACS San Diego: Kate Holloway Award Symposium}\vspace{0.5ex}
+
+\talk{10 Mar 2022}{Santa Fe, NM}A Moonshot on theory and practice \\ {\small OpenEye CUP XXI}\vspace{0.5ex}
+
+\talk{21 Apr 2021}{ZOOM}The COVID Moonshot: An open science collaboration to develop an orally bioavailable inhibitor of SARS-CoV-2 main viral protease \\ {\small OpenEye Spring MiniCUP 2021}\vspace{0.5ex}
+
+\talk{5 Apr 2021}{ZOOM}The COVID Moonshot: An open science collaboration to develop an orally bioavailable inhibitor of SARS-CoV-2 main viral protease \\ {\small ACS Spring 2021 Meeting}\vspace{0.5ex}
+
+\talk{16 Mar 2021}{ZOOM}The COVID Moonshot: Closing in on an orally-bioavailable non-peptidomimetic small molecule inhibitor of SARS-CoV-2 Mpro with an open science collaboration \\ {\small Winter RosettaCon}\vspace{0.5ex}
+
+\talk{26 Feb 2021}{ZOOM}The COVID Moonshot: Closing in on an orally-bioavailable non-peptidomimetic small molecule inhibitor of SARS-CoV-2 Mpro with an open science collaboration \\ {\small Biophysical Society Annual Meeting}\vspace{0.5ex}
+
+\talk{29 Jan 2021}{ZOOM}OpenMM: Integrating ML to transform drug discovery \\ {\small NVIDIA Round Table on AI/ML Workloads for MD}\vspace{0.5ex}
+
+\talk{26 Jan 2021}{ZOOM}The COVID Moonshot: Closing in on an orally-bioavailable non-peptidomimetic small molecule inhibitor of SARS-CoV-2 Mpro with an open science collaboration \\ {\small CSHL COVID/SARS-CoV-2 Rapid Research Reports 5}\vspace{0.5ex}
+
+\talk{8 Dec 2020}{ZOOM}OpenMM: Key infrastructure for biomolecular modeling and simulation \\ {\small CZI Essential Open Source Software for Science}\vspace{0.5ex}
+
+\talk{25 Nov 2020}{ZOOM}Learning biomolecular potentials for drug discovery \\ {\small NeurIPS}\vspace{0.5ex}
+
+\talk{5 May 2020}{ZOOM}Future directions in force field science \\ {\small Open Force Field Initiative Virtual Meeting}\vspace{0.5ex}
+
+\talk{14 Mar 2020}{Santa Fe, NM}Analysis, Interpretation, and Presentation of Free Energy Results \\ {\small OpenEye CUP XX}\vspace{0.5ex}
+
+\talk{13 Mar 2020}{Santa Fe, NM}Update on the Open Force Field Initiative \\ {\small OpenEye CUP XX}\vspace{0.5ex}
+
+\talk{21 Nov 2019}{Cambridge, MA}Setting free energy calculations free: Opening up the free energy ecosystem \\ {\small OpenEye MiniCUP Cambridge MA}\vspace{0.5ex}
+
+\talk{17 Nov 2019}{College Park, MD}Powering the next generation of research in machine learning in chemistry with OpenMM, the Open Force Field Initiative, and Blind Predictive Challenges \\ {\small MolSSI Workshop in Machine learning in Chemistry}\vspace{0.5ex}
+
+\talk{5 Nov 2019}{Mainz, Germany}Looking to the future of drug discovery: Integrating free energy calculations, machine learning, and autonomous discovery to drive molecular design \\ {\small German Conference on Cheminformatics}\vspace{0.5ex}
+
+\talk{5 Nov 2019}{Mainz, Germany}Looking to the future of drug discovery: Integrating free energy calculations, machine learning, and autonomous discovery to drive molecular design \\ {\small German Conference on Cheminformatics}\vspace{0.5ex}
+
+\talk{21 Oct 2019}{St Louis, MO}Folding@home Consortium: Perspectives from the Chodera lab \\ {\small Folding@home Consortium Meeting, Washington University, St Louis}\vspace{0.5ex}
+
+\talk{23 Aug 2019}{La Jolla, CA}Looking forward to the future of assessment of predictive modeling and blinded prediction challenges \\ {\small SAMPL/D3R Workshop}\vspace{0.5ex}
+
+\talk{15 Jul 2019}{Mount Snow, VT}Alchemical free energy calculations: Differentiating approaches, measuring impact, and surveying the open source ecosystem \\ {\small Computer Aided Drug Discovery GRC}\vspace{0.5ex}
+
+\talk{27 Jun 2019}{Telluride, CO}Protonation state effects in small molecule recognition and design \\ {\small TSRC Protein Electrostatics}\vspace{0.5ex}
+
+\talk{19 Jun 2019}{Berlin, Germany}Molecular kinetics, free energy calculations, and machine learning for drug discovery \\ {\small MolKin 2019}\vspace{0.5ex}
+
+\talk{7 Jun 2019}{Mainz, Germany}Molecular kinetics, free energy calculations, and machine learning for drug discovery \\ {\small Mainz Materials Simulation Days 2019}\vspace{0.5ex}
+
+\talk{27 May 2019}{G\"{o}ttingen, Germany}What's next for alchemical free energy calculations? \\ {\small Alchemical Free Energy Calculations in Drug Discovery 2019}\vspace{0.5ex}
+
+\talk{26 Apr 2019}{New York, NY}Redesigning drug design (together)\\ {\small Mid-Atlantic Computational Chemistry / NY Area Group in Informatics and Modeling}\vspace{0.5ex}
+
+\talk{17 Apr 2019}{Tempe, AZ}Redesigning drug design\\ {\small Arizona State University}\vspace{0.5ex}
+
+\talk{15 Apr 2019}{Cambridge, MA}Redesigning drug design: New predictive modeling tools for designing selective small molecules with targeted properties\\ {\small Celgene}\vspace{0.5ex}
+
+\talk{15 Apr 2019}{Cambridge, MA}Redesigning drug design: New predictive modeling tools for designing selective small molecules with targeted properties\\ {\small Celgene}\vspace{0.5ex}
+
+\talk{8 Mar 2019}{Santa Fe, NM}Free energy calculations on Orion: Research and Development for 2019\\ {\small OpenEye CUP XIX Free Energy Summit}\vspace{0.5ex}
+
+\talk{5 Mar 2019}{Baltimore, MD}Closing the loop in automated design and measurement: Scalable inference for biophysical experiments\\ {\small Biophysical Society Meeting: Symposium on Bayesian methods in biophysics}\vspace{0.5ex}
+
+\talk{27 Nov 2018}{Stockholm}Streamlining molecular simulation data\\ {\small BioExcel Workshop on Interoperability and Reproducibility in Molecular Simulations}\vspace{0.5ex}
+
+\talk{11 Nov 2018}{Berlin}Redesigning drug design\\ {\small Future Medicine Berlin}\vspace{0.5ex}
+
+\talk{7 Oct 2018}{Tempe, AZ}What can protein folding teach us about drug discovery?\\ {\small Statistical Physics in Biology}\vspace{0.5ex}
+
+\talk{2 Oct 2018}{Vienna, Austria}Rare events and large-scale conformational changes in drug discovery\\ {\small ECAM Workshop: Large scale activated event simulations}\vspace{0.5ex}
+
+\talk{12 Jun 2018}{Biddeford, ME}What can physical modeling tell us about mutational mechanisms of kinase inhibitor resistance? \\ {\small Human Genetic Variation GRC}\vspace{0.5ex}
+
+\talk{8 Mar 2018}{Santa Fe, NM}Testing the Friesner Conjecture: Are relative free energy calculations always more efficient than absolute? \\ {\small OpenEye CUP XVIII}\vspace{0.5ex}
+
+\talk{22 Feb 2018}{San Diego, CA}The SAMPL6 Challenges: Advancing molecular modeling accuracy with targeted blind challenges \\ {\small Drug Design Data Resource (D3R) Workshop}\vspace{0.5ex}
+
+\talk{13 Nov 2017}{New York, MA}Bridging scales in cancer\\ {\small Simons MPS Conference}\vspace{0.5ex}
+
+\talk{9 Nov 2017}{Cambridge, MA}Building next-generation forcefields and moving free energy calculations to the cloud\\ {\small OpenEye MiniCUP}\vspace{0.5ex}
+
+\talk{20 Sep 2017}{Berlin, Germany}Next-generation small molecule forcefields\\ {\small RDKit User Group Meeting}\vspace{0.5ex}
+
+\talk{24 Aug 2017}{Gaithersberg, MD}Challenges and opportunities for reproducibility and reliability in molecular simulations\\ {\small MolSSI Best Practices Workshop, NIST}\vspace{0.5ex}
+
+\talk{15 Aug 2017}{Leiden, Netherlands}Developing GPU-accelerated molecular simulation tools with OpenMM and the Omnia ecosystem\\ {\small ECAM Software Workshop on Path Sampling}\vspace{0.5ex}
+
+\talk{14 Jul 2017}{Telluride, CO}Toward realizing the dream of free-energy based small molecule design\\ {\small Telluride Free Energy Workshop}\vspace{0.5ex}
+
+\talk{2 Jun 2017}{New York, NY}What can physical modeling tell us about mutational mechanisms of kinase inhibitor resistance?\\ {\small NYU Genomics Symposium}\vspace{0.5ex}
+
+\talk{29 May 2017}{Toronto, Canada}The statistical mechanics of drug discovery\\ {\small Canadian Society of Chemistry 100th Anniversary National Meeting}\vspace{0.5ex}
+
+\talk{3 May 2017}{Waltham, MA}What can physical modeling tell us about mutational mechanisms of kinase inhibitor resistance?\\ {\small EMBL-EBI Informatics and -omics for Oncology Drug Resistance}\vspace{0.5ex}
+
+\talk{8 Mar 2017}{Santa Fe, NM}Can free energies really be free? Alchemical free energy calculations in the cloud\\ {\small OpenEye CUP XVII}\vspace{0.5ex}
+
+\talk{8 Oct 2016}{Houston, TX}Advancing Quantitative Biophysical Predictions\\ {\small Molecular Software Sciences Institute --- Biomolecular Simulation}\vspace{0.5ex}
+
+\talk{14 Sep 2016}{London, UK}Redesigning drug design\\ {\small CCPBioSim --- Kings College London}\vspace{0.5ex}
+
+\talk{23 Aug 2016}{Philadelphia, PA}What is required for alchemical free energy calculations to be useful for predicting drug polypharmacology?\\ {\small ACS Fall National Meeting}\vspace{0.5ex}
+
+\talk{22 Aug 2016}{Philadelphia, PA}Advancing quantitative biophysical predictions: What can be gained from industry-academic data sharing?\\ {\small ACS Fall National Meeting}\vspace{0.5ex}
+
+\talk{17 May 2016}{Boston, MA}How can we combine computation and experiment to move the field forward?\\ {\small Free Energy Calculations in Drug Discovery, Vertex}\vspace{0.5ex}
+
+\talk{16 May 2016}{San Diego, CA}Redesigning drug design\\ {\small ACS San Diego}\vspace{0.5ex}
+
+\talk{4 Mar 2016}{Edinburgh, UK}Redesigning drug design\\ {\small International Centre for Mathematical Sciences (ICMS)}\vspace{0.5ex}
+
+\talk{1 Mar 2016}{La Jolla, CA}What will it take to design kinase inhibitors with desired selectivity and resistance profiles?\\ {\small GTC 11th Protein Kinases in Drug Discovery Meeting}\vspace{0.5ex}
+
+\talk{19 Oct 2015}{Edinburgh, UK}Biomolecular software interoperability\\ {\small CECAM Software Interoperability Workshop}\vspace{0.5ex}
+
+\talk{18 Sep 2015}{Vienna, Austria}Reaction coordinates in drug discovery\\ {\small ESI Insight from Molecular Simulations}\vspace{0.5ex}
+
+\talk{8 Sep 2015}{Berlin, Germany}Redesigning drug design\\ {\small World Molecular Kinetics Meeting}\vspace{0.5ex}
+
+\talk{5 Jun 2015}{Tokyo, Japan}Redesigning drug design\\ {\small OpenEye JCUP VI}\vspace{0.5ex}
+
+\talk{21 Jan 2015}{New York, NY}Redesigning drug design\\ {\small New York Structural Biology Discussion Group}\vspace{0.5ex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %\subsection*{Lab Member Talks}
 %
 %\talk{22 Feb 2018}{Mehtap Isik}The SAMPL6 p$K_a$ challenge\\ {\small Drug Design Data Resource (D3R) Workshop, La Jolla, CA}\vspace{0.5ex}
@@ -1262,7 +1394,7 @@ Ad hoc reviewer and virtual panel member for Chemical Theory, Models, and Comput
 %
 %\talk{13 Sep 2017}{Steven Albanese}Using physical modeling to direct biophysical experiments and predict the functional impact of clinical cancer mutations in kinases on drug susceptibility\\ {\small Med Into Grad Symposium: Precision Medicine, Columbia University, New York, NY}\vspace{0.5ex}
 %
-%%\talk{6 Oct 2017}{Levi Naden}Computational Free Energy For Everyone (not just Experts)\\ {\small MSKCC csBioMed Work in Progress Talk, MSKCC, New York, NY}\vspace{0.5ex}
+%\talk{6 Oct 2017}{Levi Naden}Computational Free Energy For Everyone (not just Experts)\\ {\small MSKCC csBioMed Work in Progress Talk, MSKCC, New York, NY}\vspace{0.5ex}
 %
 %\talk{8 Sep 2017}{Steven Albanese}Using physical modeling to direct biophysical experiments and predict the functional impact of clinical cancer mutations in kinases on drug susceptibility\\ {\small EMBO Workshop: Integrating genomics and biophysics to comprehend functional genetic variation, Turin, Italy}\vspace{0.5ex}
 %
