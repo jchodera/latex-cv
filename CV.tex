@@ -528,6 +528,8 @@ $\ddag$ denotes co-corresponding authors}
 
 \newarticle{fragmenter}{\underline{Stern CD}, Bayly CI, Smith DGA, \underline{Fass J}, Wang L-P, Mobley DL, and \jdc}{Capturing non-local through-bond effects when fragmenting molecules for quantum chemical torsion scans}{\emph{Preprint}}{bioR$\chi$iv}{https://doi.org/10.1101/2020.08.27.270934}{We show how the Wiberg Bond Order (WBO) can be used to construct small molecule fragmentation schemes that will avoid disrupting the chemical environment around torsions. The resulting fragmentation scheme powers the QCSubmit tool used to fragment and inject small molecule datasets into the QCFractal computation pipeline for deposition into the QCArchive quantum chemistry archive the Open Force Field Initiative uses for constructing force fields, as well as powering bespoke torsion refitting for individual molecules.}
 
+\newarticle{biphenyl-wbo}{\underline{Stern CD}, Maat J, Dotson DL, Bayly CI, Smith DGA, Mobley DL, and \jdc}{Capturing non-local through-bond effects in molecular mechanics force fields: II. Using fractional bond orders to fit torsion parameters}{\emph{Preprint}}{bioR$\chi$iv}{https://www.biorxiv.org/content/10.1101/2022.01.17.476653v1.abstract}{We show how the Wiberg Bond Order (WBO) can be used to accurately interpolate torsional profiles for molecular mechanics force fields, which holts the potential for drastically reducing the complexity of these force fields while increasing their ability to generalize and accurately treat complex druglike molecules such as kinase inhibitors.}
+
 \newarticle{gimlet}{\underline{Wang Y}, \underline{Fass J}, \underline{Stern CD}, and \jdc}{Graph nets for partial charge prediction}{\emph{Preprint}}{ar$\chi$iv}{https://arxiv.org/abs/1909.07903}{Graph convolutional and message-passing networks can be a powerful tool for predicting physical properties of small molecules when coupled to a simple physical model that encodes the relevant invariances. Here, we show the ability of graph nets to predict partial atomic charges for use in molecular dynamics simulations and physical docking.}
 
 {\bf Experimental best practices}\\
@@ -1476,8 +1478,8 @@ All funding sources are publicly available online at \url{http://choderalab.org/
 %\vspace{1.5ex}
 
 Vir Biosciences Sponsored Research Agreement SK2019-0582 \\
-{\bf Development of alchemical free energy methods for predicting the impact of point mutations}\\
-The goal of this project is to develop alchemical free energy methods for predicting the impact of point mutations on antibody:antigen affinities.\\
+{\bf Development of alchemical free energy methods for predicting the impact of point mutations on antigen and antibody affinities}\\
+The goal of this project is to develop alchemical free energy methods for predicting the impact of point mutations on antigen and antibody affinities for SARS-CoV-2.\\
 8/1/2019 -- 7/31/2023\\
 \$55,556 annual direct costs
 
@@ -1494,7 +1496,7 @@ The goal of this project is to develop open source scalable cloud workflows for 
 Interline Therapeutics Sponsored Research Agreement SK2020-0898 \\
 {\bf Identification of key biophysical interactions in ligase-substrate recognition} \\
 The goal of this project is to identify key biophysical interactions necessary for ligase-substrate recognition and developing quantitative accurate open source tools for predicting changes in affinity associated with point mutations in either ubiquitin ligases or their substrate peptides. \\
-1/15/2021 -- 1/14/2023\\
+1/15/2021 -- 4/15/2023\\
 \$187,998 direct costs
 
 
@@ -1503,7 +1505,7 @@ The goal of this project is to identify key biophysical interactions necessary f
 % ACTIVE COLLABORATIVE GRANTS
 \subsubsection*{Collaborative Grants}
 
-NIH NIAID U19 1U19AI171399-01 (MPI: Chodera [Contact PI]; Alpha Lee, Potera; Ben Perry, DNDi) \\
+NIH NIAID U19 1U19AI171399 (MPI: Chodera [Contact PI]; Alpha Lee, PostEra; Peter Sj\"{o}, DNDi) \\
 {\bf AI-driven Structure-enabled Antiviral Platform (ASAP)}
 co-Is: Karla Kirkegaard (Stanford), Matt Bogyo (Stanford), Jesse Bloom (Fred Hutch), Frank von Delft (Diamond Light Source), Martin Walsh (Diamond Light Source), Alpha Lee (PostEra), Nir London (Weizmann), Ed Griffen (MedChemica), Laurent Fraisse (DNDi), Haim Barr (Weizmann), Daren Fearon (Diamond Light Source), Kris White (Mount Sinai), Adolfo Garc\'{i}a-Sastre (Mount Sinai), Randy Albrecht (Mount Sinai) \\
 05/16/2022 -- 04/30/2025\\
@@ -2090,11 +2092,6 @@ The goal of this project is to use computational techniques that explicitly inco
   Tri-Institutional Program in Computational Biology and Medicine (CBM)\\
   \emph{Machine learning for alchemical free energy calculations}
 
-  \item Talia Kimber (4/1/2019--) [co-supervised with Andrea Volkamer, Charit\'e Berlin] \\
-  Charit\'e Universit\"{a}tmedizin (supervisor: Andrea Volkamer)\\
-  Freie Universit\"{a}t Berlin, Computer Science PhD program (supervisor: Frank No\'{e})\\
-  \emph{Machine learning for optimizing affinity/selectivity and predicting resistance}
-  
   % check this
   \item Alexander Payne (8/1/2020--) [co-supervised with Rich Hite, MSKCC Structural Biology Program] \\
   Program in Physiology, Biophysics, and Systems Biology (PBSB)\\
@@ -2114,16 +2111,32 @@ The goal of this project is to use computational techniques that explicitly inco
   \item Benjamin Kaminow (1/1/2022--)\\
   Tri-Institutional Program in Computational Biology and Medicine (CBM)\\
   \emph{Structure-enabled machine learning for drug discovery}
+  
+  % check this
+  \item Jessica White (7/1/2022--)\\
+  Tri-Institutional Program in Computational Biology and Medicine (CBM)\\
+  \emph{Machine learning for kinase-directed drug discovery}  
 
 \end{itemize}
 
 \subsubsection*{Software Scientists}
 
 \begin{itemize}
-  % Check start date
-  \item Iv\'{a}n Pulido (7/1/2021--)\\
+  \item Iv\'{a}n Pulido (8/2021--)\\
   \emph{Alchemical free energy calculation software infrastructure; software infrastructure support for ASAP}
 
+  \item Jenke Scheen (8/2022--) \emph{via \href{http://omsf.io}{OMSF}}\\
+  \emph{Computer-aided drug discovery software infrastructure lead for ASAP}
+
+  \item Mike Henry (1/2021--)\\
+  \emph{Alchemical free energy calculation software infrastructure; software infrastructure support for ASAP}
+
+  \item David Dotson (1/2021--) \emph{via \href{http://omsf.io}{OMSF}}\\
+  \emph{Folding\@home distributed computing and alchemical free energy software infrastructure support for ASAP}
+  
+  \item Hugo MacDermott-Opeskin (1/2023--) \emph{via \href{http://omsf.io}{OMSF}}\\
+  \emph{Folding\@home distributed computing and alchemical free energy software infrastructure support for ASAP}
+  
 \end{itemize}
 
 % TODO: Add contractors?
@@ -2220,6 +2233,11 @@ My lab trains interdisciplinary scientists to tackle the most challenging proble
 
 \begin{itemize}
 
+  \item Talia Kimber (4/1/2019--2/28/2023) [co-supervised with Andrea Volkamer, Charit\'e Berlin] \\
+  Charit\'e Universit\"{a}tmedizin (supervisor: Andrea Volkamer)\\
+  Freie Universit\"{a}t Berlin, Computer Science PhD program (supervisor: Frank No\'{e})\\
+  \emph{Machine learning for optimizing affinity/selectivity and predicting resistance}
+  
   % check this
   \item Joshua Fass (9/1/2015----11/9/2020)\\
   Tri-Institutional Program in Computational Biology and Medicine (CBM)\\
